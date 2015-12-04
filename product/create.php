@@ -1,5 +1,4 @@
 <?php
-     
     require 'database.php';
  
     if ( !empty($_POST)) {
@@ -14,19 +13,16 @@
         $cost = $_POST['cost'];
         $description = $_POST['description'];
         $subid = $_POST['subcategory_id'];
-         
         // validate input
         $valid = true;
         if (empty($name)) {
             $nameError = 'Please enter Name';
             $valid = false;
         }
-         
         if (empty($cost)) {
             $costError = 'Please enter Cost';
             $valid = false;
         }
-         
         if (empty($description)) {
             $descriptionError = 'Please enter Description';
             $valid = false;
@@ -39,7 +35,6 @@
          
         // insert data
         if ($valid) {
-            echo "gosh":
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO product (name,cost,description,subcategory_id) values(?, ?, ?, ?)";
@@ -116,4 +111,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-
