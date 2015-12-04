@@ -37,7 +37,7 @@
                         </div>
                       </div>
                       <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
-                        <label class="control-label">Mobile Number</label>
+                        <label class="control-label">Description</label>
                         <div class="controls">
                             <input name="description" type="text"  placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
                             <?php if (!empty($descriptionError)): ?>
