@@ -1,31 +1,28 @@
 <?php
     require 'database.php';
-
+ 
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
         $costError = null;
         $descriptionError = null;
         $subidError = null;
-
+         
         // keep track post values
         $name = $_POST['name'];
         $cost = $_POST['cost'];
         $description = $_POST['description'];
         $subid = $_POST['subcategory_id'];
-
         // validate input
         $valid = true;
         if (empty($name)) {
             $nameError = 'Please enter Name';
             $valid = false;
         }
-
         if (empty($cost)) {
             $costError = 'Please enter Cost';
             $valid = false;
         }
-
         if (empty($description)) {
             $descriptionError = 'Please enter Description';
             $valid = false;
@@ -35,6 +32,7 @@
             $subidError = 'Please enter Subcategory id';
             $valid = false;
         }
+         
         // insert data
         if ($valid) {
             $pdo = Database::connect();
@@ -47,9 +45,6 @@
         }
     }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <!-- NEW CREATE PAGE -->
