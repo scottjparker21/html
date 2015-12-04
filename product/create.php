@@ -1,3 +1,55 @@
+<?php
+    require 'database.php';
+
+    if ( !empty($_POST)) {
+        // keep track validation errors
+        $nameError = null;
+        $costError = null;
+        $descriptionError = null;
+        $subidError = null;
+
+        // keep track post values
+        $name = $_POST['name'];
+        $cost = $_POST['cost'];
+        $description = $_POST['description'];
+        $subid = $_POST['subcategory_id'];
+
+        // validate input
+        $valid = true;
+        if (empty($name)) {
+            $nameError = 'Please enter Name';
+            $valid = false;
+        }
+
+        if (empty($cost)) {
+            $costError = 'Please enter Cost';
+            $valid = false;
+        }
+
+        if (empty($description)) {
+            $descriptionError = 'Please enter Description';
+            $valid = false;
+        }
+
+        if (empty($subid)) {
+            $subidError = 'Please enter Subcategory id';
+            $valid = false;
+        }
+        // insert data
+        if ($valid) {
+            $pdo = Database::connect();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "INSERT INTO product (name,cost,description,subcategory_id) values(?, ?, ?, ?)";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($name,$email,$mobile,$subid));
+            Database::disconnect();
+            header("Location: index.php");
+        }
+    }
+?>
+
+
+
 
 <!DOCTYPE html>
 <!-- NEW CREATE PAGE -->
@@ -64,54 +116,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-     
-    require 'database.php';
- 
-    if ( !empty($_POST)) {
-        // keep track validation errors
-        $nameError = null;
-        $costError = null;
-        $descriptionError = null;
-        $subidError = null;
-         
-        // keep track post values
-        $name = $_POST['name'];
-        $cost = $_POST['cost'];
-        $description = $_POST['description'];
-        $subid = $_POST['subcategory_id'];
-         
-        // validate input
-        $valid = true;
-        if (empty($name)) {
-            $nameError = 'Please enter Name';
-            $valid = false;
-        }
-         
-        if (empty($cost)) {
-            $costError = 'Please enter Cost';
-            $valid = false;
-        }
-         
-        if (empty($description)) {
-            $descriptionError = 'Please enter Description';
-            $valid = false;
-        }
-
-        if (empty($subid)) {
-            $subidError = 'Please enter Subcategory id';
-            $valid = false;
-        }
-         
-        // insert data
-        if ($valid) {
-            $pdo = Database::connect();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO product (name,cost,description,subcategory_id) values(?, ?, ?, ?)";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($name,$email,$mobile,$subid));
-            Database::disconnect();
-            header("Location: index.php");
-        }
-    }
-?>
