@@ -64,6 +64,7 @@
         $name = $data['name'];
         $cost = $data['cost'];
         $description = $data['description'];
+        $subid = $data['subcategory_id'];
         Database::disconnect();
     }
 ?>
@@ -111,6 +112,15 @@
                             <input name="description" type="text"  placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
                             <?php if (!empty($descriptionError)): ?>
                                 <span class="help-inline"><?php echo $descriptionError;?></span>
+                            <?php endif;?>
+                        </div>
+                      </div>
+                      <div class="control-group <?php echo !empty($subidError)?'error':'';?>">
+                        <label class="control-label">Subcategory Id</label>
+                        <div class="controls">
+                            <input name="subid" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
+                            <?php if (!empty($subidError)): ?>
+                                <span class="help-inline"><?php echo $subidError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
