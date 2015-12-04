@@ -22,7 +22,8 @@
                       <th>Name</th>
                       <th>Cost</th>
                       <th>Description</th>
-		      <th>Action</th>
+                      <th>Subcategory id</th>
+		                  <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -35,6 +36,7 @@
                             echo '<td>'. $row['name'] . '</td>';
                             echo '<td>'. $row['cost'] . '</td>';
                             echo '<td>'. $row['description'] . '</td>';
+                            echo '<td>'. $row['subcategory_id'] . '</td>';
                             echo '<td width=250>';
                                 echo '<a class="btn btn-default " href="read.php?id='.$row['id'].'">Read</a>';
                                 echo ' ';

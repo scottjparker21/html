@@ -1,6 +1,6 @@
 <?php
-
-require 'database.php';
+// READ PAGE
+    require 'database.php';
     $id = null;
     if ( !empty($_GET['id'])) {
         $id = $_REQUEST['id'];
@@ -23,9 +23,9 @@ require 'database.php';
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link   href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -58,6 +58,14 @@ require 'database.php';
                         <div class="controls">
                             <label class="checkbox">
                                 <?php echo $data['description'];?>
+                            </label>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">Subcategory id</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['subcategory_id'];?>
                             </label>
                         </div>
                       </div>
