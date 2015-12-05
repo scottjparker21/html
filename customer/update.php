@@ -15,30 +15,30 @@
                     </div>
              
                     <form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
-                      <div class="control-group <?php echo !empty($nameError)?'error':'';?>">
-                        <label class="control-label">Name</label>
+                      <div class="control-group <?php echo !empty($firstError)?'error':'';?>">
+                        <label class="control-label">First</label>
                         <div class="controls">
-                            <input name="name" type="text"  placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
-                            <?php if (!empty($nameError)): ?>
-                                <span class="help-inline"><?php echo $nameError;?></span>
+                            <input name="first" type="text"  placeholder="First" value="<?php echo !empty($first)?$first:'';?>">
+                            <?php if (!empty($firstError)): ?>
+                                <span class="help-inline"><?php echo $firstError;?></span>
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($emailError)?'error':'';?>">
-                        <label class="control-label">Email Address</label>
+                      <div class="control-group <?php echo !empty($lastError)?'error':'';?>">
+                        <label class="control-label">Last</label>
                         <div class="controls">
-                            <input name="email" type="text" placeholder="Email Address" value="<?php echo !empty($email)?$email:'';?>">
-                            <?php if (!empty($emailError)): ?>
-                                <span class="help-inline"><?php echo $emailError;?></span>
+                            <input name="last" type="text" placeholder="Last" value="<?php echo !empty($last)?$last:'';?>">
+                            <?php if (!empty($lastError)): ?>
+                                <span class="help-inline"><?php echo $lastError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($mobileError)?'error':'';?>">
-                        <label class="control-label">Mobile Number</label>
+                      <div class="control-group <?php echo !empty($ageError)?'error':'';?>">
+                        <label class="control-label">Age</label>
                         <div class="controls">
-                            <input name="mobile" type="text"  placeholder="Mobile Number" value="<?php echo !empty($mobile)?$mobile:'';?>">
-                            <?php if (!empty($mobileError)): ?>
-                                <span class="help-inline"><?php echo $mobileError;?></span>
+                            <input name="age" type="text"  placeholder="Age" value="<?php echo !empty($age)?$age:'';?>">
+                            <?php if (!empty($ageError)): ?>
+                                <span class="help-inline"><?php echo $ageError;?></span>
                             <?php endif;?>
                         </div>
                       </div>

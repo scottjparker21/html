@@ -9,7 +9,7 @@
 <body>
     <div class="container">
             <div class="row">
-                <h3>PHP CRUD Grid</h3>
+                <h3>Customer</h3>
             </div>
             <div class="row">
 		<p>
@@ -18,22 +18,23 @@
                 <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Email Address</th>
-                      <th>Mobile Number</th>
-		      <th>Action</th>
+                      <th>First</th>
+                      <th>Last</th>
+                      <th>Age</th>
+		                  <th>Phone</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
                    include 'database.php';
                    $pdo = Database::connect();
-                   $sql = 'SELECT * FROM customers ORDER BY id DESC';
+                   $sql = 'SELECT * FROM customer ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
-                            echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['email'] . '</td>';
-                            echo '<td>'. $row['mobile'] . '</td>';
+                            echo '<td>'. $row['first'] . '</td>';
+                            echo '<td>'. $row['last'] . '</td>';
+                            echo '<td>'. $row['age'] . '</td>';
+                            echo '<td>'. $row['phone'] . '</td>';
 			    echo '<td><a class="btn" href="read.php?id='.$row['id'].'">Read</a></td>';
                             echo '<td width=250>';
                                 echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';

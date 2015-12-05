@@ -10,7 +10,7 @@ require 'database.php';
     } else {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM customers where id = ?";
+        $sql = "SELECT * FROM customer where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -31,31 +31,39 @@ require 'database.php';
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Read a Customer</h3>
+                        <h3>Customer information</h3>
                     </div>
                      
                     <div class="form-horizontal" >
                       <div class="control-group">
-                        <label class="control-label">Name</label>
+                        <label class="control-label">First</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['name'];?>
+                                <?php echo $data['first'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Email Address</label>
+                        <label class="control-label">Last</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['email'];?>
+                                <?php echo $data['last'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Mobile Number</label>
+                        <label class="control-label">Age</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['mobile'];?>
+                                <?php echo $data['age'];?>
+                            </label>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">Phone</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['phone'];?>
                             </label>
                         </div>
                       </div>

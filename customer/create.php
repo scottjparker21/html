@@ -5,32 +5,35 @@
  
     if ( !empty($_POST)) {
         // keep track validation errors
-        $nameError = null;
-        $emailError = null;
-        $mobileError = null;
+        $firstError = null;
+        $lastError = null;
+        $ageError = null;
+        $phoneError = null;
          
         // keep track post values
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
+        $first = $_POST['first'];
+        $last = $_POST['last'];
+        $age = $_POST['age'];
+        $phone = $_POST['phone'];
          
         // validate input
         $valid = true;
-        if (empty($name)) {
-            $nameError = 'Please enter Name';
+        if (empty($first)) {
+            $firstError = 'Please enter First name';
             $valid = false;
         }
          
-        if (empty($email)) {
-            $emailError = 'Please enter Email Address';
+        if (empty($last)) {
+            $lastError = 'Please enter Last name';
             $valid = false;
-        } else if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
-            $emailError = 'Please enter a valid Email Address';
+        } 
+         
+        if (empty($age)) {
+            $mobileError = 'Please enter Age';
             $valid = false;
         }
-         
-        if (empty($mobile)) {
-            $mobileError = 'Please enter Mobile Number';
+        if (empty($phone)) {
+            $mobileError = 'Please enter Phone';
             $valid = false;
         }
          
@@ -38,9 +41,9 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO customers (name,email,mobile) values(?, ?, ?)";
+            $sql = "INSERT INTO customer (first,last,age,phone) values(?, ?, ?, ?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$email,$mobile));
+            $q->execute(array($first,$last,$age,$phone));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -64,29 +67,38 @@
              
                     <form class="form-horizontal" action="create.php" method="post">
                       <div class="control-group <?php echo !empty($nameError)?'error':'';?>">
-                        <label class="control-label">Name</label>
+                        <label class="control-label">First name</label>
                         <div class="controls">
-                            <input name="name" type="text"  placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
-                            <?php if (!empty($nameError)): ?>
-                                <span class="help-inline"><?php echo $nameError;?></span>
+                            <input name="first" type="text"  placeholder="First name" value="<?php echo !empty($first)?$first:'';?>">
+                            <?php if (!empty($firstError)): ?>
+                                <span class="help-inline"><?php echo $firstError;?></span>
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($emailError)?'error':'';?>">
-                        <label class="control-label">Email Address</label>
+                      <div class="control-group <?php echo !empty($lastError)?'error':'';?>">
+                        <label class="control-label">Last name</label>
                         <div class="controls">
-                            <input name="email" type="text" placeholder="Email Address" value="<?php echo !empty($email)?$email:'';?>">
-                            <?php if (!empty($emailError)): ?>
-                                <span class="help-inline"><?php echo $emailError;?></span>
+                            <input name="last" type="text" placeholder="Last name" value="<?php echo !empty($last)?$last:'';?>">
+                            <?php if (!empty($lastError)): ?>
+                                <span class="help-inline"><?php echo $lastError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($mobileError)?'error':'';?>">
-                        <label class="control-label">Mobile Number</label>
+                      <div class="control-group <?php echo !empty($ageError)?'error':'';?>">
+                        <label class="control-label">Age</label>
                         <div class="controls">
-                            <input name="mobile" type="text"  placeholder="Mobile Number" value="<?php echo !empty($mobile)?$mobile:'';?>">
-                            <?php if (!empty($mobileError)): ?>
-                                <span class="help-inline"><?php echo $mobileError;?></span>
+                            <input name="age" type="text"  placeholder="Age" value="<?php echo !empty($age)?$age:'';?>">
+                            <?php if (!empty($ageError)): ?>
+                                <span class="help-inline"><?php echo $ageError;?></span>
+                            <?php endif;?>
+                        </div>
+                      </div>
+                      <div class="control-group <?php echo !empty($phoneError)?'error':'';?>">
+                        <label class="control-label">Phone</label>
+                        <div class="controls">
+                            <input name="phone" type="text" placeholder="Phone" value="<?php echo !empty($phone)?$phone:'';?>">
+                            <?php if (!empty($phoneError)): ?>
+                                <span class="help-inline"><?php echo $phoneError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
