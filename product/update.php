@@ -55,7 +55,7 @@
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE product  set name = ?, cost = ?, description = ?, subcategory_id = ?  WHERE id = ?";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$cost,$description,$subid));
+            $q->execute(array($name,$cost,$description,$subid,$id));
             Database::disconnect();
             header("Location: index.php");
         }
