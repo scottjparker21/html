@@ -1,4 +1,5 @@
-<?php
+<?
+    echo "i'm here";
     require 'database.php';
  
     $id = null;
@@ -46,6 +47,7 @@
          
         // update data
         if ($valid) {
+            echo "in the connect";
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE product  set name = ?, cost = ?, description = ?, subcategory_id = ?  WHERE id = ?";
@@ -55,6 +57,7 @@
             header("Location: index.php");
         }
     } else {
+        echo "in the else ";
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM product where id = ?";
