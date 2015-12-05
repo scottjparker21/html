@@ -23,7 +23,7 @@
                       <th>Cost</th>
                       <th>Description</th>
                       <th>Subcategory id</th>
-		                  <th>Action</th>
+		                 
                     </tr>
                   </thead>
                   <tbody>
