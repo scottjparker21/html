@@ -37,7 +37,7 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO product (name,cost,description,subid) values(?, ?, ?, ?)";
+            $sql = "INSERT INTO product (name,cost,description,subcategory_id) values(?, ?, ?, ?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name,$email,$mobile,$subid));
             Database::disconnect();
@@ -95,7 +95,7 @@
                         <div class="control-group <?php echo !empty($subidError)?'error':'';?>">
                         <label class="control-label">Subcategory id</label>
                         <div class="controls">
-                            <input name="subid" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
+                            <input name="subcategory_id" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
                             <?php if (!empty($subidError)): ?>
                                 <span class="help-inline"><?php echo $subidError;?></span>
                             <?php endif;?>
