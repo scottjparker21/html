@@ -23,7 +23,6 @@
                       <th>Cost</th>
                       <th>Description</th>
                       <th>Subcategory id</th>
-		                 
                     </tr>
                   </thead>
                   <tbody>
@@ -38,14 +37,14 @@
                             echo '<td>'. $row['description'] . '</td>';
                             echo '<td>'. $row['subcategory_id'] . '</td>';
                             echo '<td width=250>';
-                                echo '<a class="btn btn-default " href="read.php?id='.$row['id'].'">Read</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
-                                echo '</td>';
-			    echo '</tr>';
-                   }
+                            echo '<a class="btn btn-default " href="read.php?id='.$row['id'].'">Read</a>';
+                            echo ' ';
+                            echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
+                            echo ' ';
+                            echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
+                            echo '</td>';
+	                           echo '</tr>';
+               }
                    Database::disconnect();
                   ?>
                   </tbody>
