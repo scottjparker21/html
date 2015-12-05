@@ -118,7 +118,7 @@
                       <div class="control-group <?php echo !empty($subidError)?'error':'';?>">
                         <label class="control-label">Subcategory Id</label>
                         <div class="controls">
-                            <input name="subcategory_id" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
+                            <input name="subid" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
                             <?php if (!empty($subidError)): ?>
                                 <span class="help-inline"><?php echo $subidError;?></span>
                             <?php endif;?>
