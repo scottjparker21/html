@@ -1,3 +1,75 @@
+
+<?php
+    require 'database.php';
+ 
+    $id = null;
+    if ( !empty($_GET['id'])) {
+        $id = $_REQUEST['id'];
+    }
+     
+    if ( null==$id ) {
+        header("Location: index.php");
+    }
+     
+    if ( !empty($_POST)) {
+        // keep track validation errors
+        $firstError = null;
+        $lastError = null;
+        $ageError = null;
+        $phoneError = null;
+         
+        // keep track post values
+        $first = $_POST['first'];
+        $last = $_POST['last'];
+        $age = $_POST['age'];
+        $phone = $_POST['phone'];
+         
+        // validate input
+        $valid = true;
+        if (empty($name)) {
+            $firstError = 'Please enter First name';
+            $valid = false;
+        }
+         
+        if (empty($last)) {
+            $lastError = 'Please enter Last name';
+            $valid = false;
+        }  
+         
+        if (empty($age)) {
+            $ageError = 'Please enter Age';
+            $valid = false;
+        }
+        if (empty($phone)) {
+            $phoneError = 'Please enter Phone number';
+            $valid = false;
+        }
+         
+        // update data
+        if ($valid) {
+            $pdo = Database::connect();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "UPDATE customer set first = ?, last = ?, age =?, phone = ? WHERE id = ?";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($first,$last,$age,$phone,$id));
+            Database::disconnect();
+            header("Location: index.php");
+        }
+    } else {
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "SELECT * FROM customer where id = ?";
+        $q = $pdo->prepare($sql);
+        $q->execute(array($id));
+        $data = $q->fetch(PDO::FETCH_ASSOC);
+        $first = $data['first'];
+        $last = $data['last'];
+        $age = $data['age'];
+        $phone = $data['phone'];
+        Database::disconnect();
+    }
+?>
+
 <TYPE html>
 <html lang="en">
 <head>
@@ -52,70 +124,5 @@
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-    require 'database.php';
- 
-    $id = null;
-    if ( !empty($_GET['id'])) {
-        $id = $_REQUEST['id'];
-    }
-     
-    if ( null==$id ) {
-        header("Location: index.php");
-    }
-     
-    if ( !empty($_POST)) {
-        // keep track validation errors
-        $nameError = null;
-        $emailError = null;
-        $mobileError = null;
-         
-        // keep track post values
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
-         
-        // validate input
-        $valid = true;
-        if (empty($name)) {
-            $nameError = 'Please enter Name';
-            $valid = false;
-        }
-         
-        if (empty($email)) {
-            $emailError = 'Please enter Email Address';
-            $valid = false;
-        } else if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
-            $emailError = 'Please enter a valid Email Address';
-            $valid = false;
-        }
-         
-        if (empty($mobile)) {
-            $mobileError = 'Please enter Mobile Number';
-            $valid = false;
-        }
-         
-        // update data
-        if ($valid) {
-            $pdo = Database::connect();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE customers  set name = ?, email = ?, mobile =? WHERE id = ?";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($name,$email,$mobile,$id));
-            Database::disconnect();
-            header("Location: index.php");
-        }
-    } else {
-        $pdo = Database::connect();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM customers where id = ?";
-        $q = $pdo->prepare($sql);
-        $q->execute(array($id));
-        $data = $q->fetch(PDO::FETCH_ASSOC);
-        $name = $data['name'];
-        $email = $data['email'];
-        $mobile = $data['mobile'];
-        Database::disconnect();
-    }
-?>
+
 

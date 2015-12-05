@@ -29,11 +29,11 @@
         } 
          
         if (empty($age)) {
-            $mobileError = 'Please enter Age';
+            $ageError = 'Please enter Age';
             $valid = false;
         }
         if (empty($phone)) {
-            $mobileError = 'Please enter Phone';
+            $phoneError = 'Please enter Phone';
             $valid = false;
         }
          
