@@ -12,7 +12,7 @@
     }
      
     if ( !empty($_POST)) {
-        // keep track validation errors
+        // keep track validation errorss
         $nameError = null;
         $costError = null;
         $descriptionError = null;
@@ -57,7 +57,7 @@
             header("Location: index.php");
         }
     } else {
-
+        echo "are you there?";
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM product where id = ?";
