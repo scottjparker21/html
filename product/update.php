@@ -1,4 +1,4 @@
-<?
+<?php
     // echo "im here";
     require 'database.php';
  
