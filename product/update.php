@@ -31,7 +31,7 @@
         }
          
         if (empty($cost)) {
-            $emailError = 'Please enter Email Address';
+            $costError = 'Please enter product cost';
             $valid = false;
         } 
          
@@ -50,7 +50,7 @@
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE product  set name = ?, cost = ?, description = ?, subcategory_id = ?  WHERE id = ?";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$email,$description,$subid));
+            $q->execute(array($name,$cost,$description,$subid));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -118,7 +118,7 @@
                       <div class="control-group <?php echo !empty($subidError)?'error':'';?>">
                         <label class="control-label">Subcategory Id</label>
                         <div class="controls">
-                            <input name="subid" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
+                            <input name="subcategory_id" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
                             <?php if (!empty($subidError)): ?>
                                 <span class="help-inline"><?php echo $subidError;?></span>
                             <?php endif;?>
