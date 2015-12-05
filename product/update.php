@@ -1,5 +1,5 @@
 <?
-    echo "i'm here";
+    echo "im here";
     require 'database.php';
  
     $id = null;
@@ -57,7 +57,7 @@
             header("Location: index.php");
         }
     } else {
-        
+
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM product where id = ?";
