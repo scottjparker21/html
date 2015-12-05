@@ -77,7 +77,7 @@
                       <div class="control-group <?php echo !empty($costError)?'error':'';?>">
                         <label class="control-label">Cost</label>
                         <div class="controls">
-                            <input name="cost" type="text" placeholder="Cost" value="<?php echo !empty($email)?$email:'';?>">
+                            <input name="cost" type="text" placeholder="Cost" value="<?php echo !empty($cost)?$cost:'';?>">
                             <?php if (!empty($costError)): ?>
                                 <span class="help-inline"><?php echo $costError;?></span>
                             <?php endif;?>
