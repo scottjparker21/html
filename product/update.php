@@ -1,5 +1,5 @@
 <?
-    echo "im here";
+    // echo "im here";
     require 'database.php';
  
     $id = null;
@@ -47,7 +47,7 @@
          
         // update data
         if ($valid) {
-            echo "in the connect";
+            // echo "in the connect";
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE product  set name = ?, cost = ?, description = ?, subcategory_id = ?  WHERE id = ?";
