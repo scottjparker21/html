@@ -26,7 +26,7 @@
          
         // validate input
         $valid = true;
-        if (empty($name)) {
+        if (empty($first)) {
             $firstError = 'Please enter First name';
             $valid = false;
         }
