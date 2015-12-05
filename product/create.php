@@ -39,7 +39,7 @@
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO product (name,cost,description,subcategory_id) values(?, ?, ?, ?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$email,$mobile,$subid));
+            $q->execute(array($name,$cost,$description,$subid));
             Database::disconnect();
             header("Location: index.php");
         }

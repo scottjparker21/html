@@ -44,7 +44,7 @@
                             echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
                             echo '</td>';
 	                           echo '</tr>';
-               }
+                  }
                    Database::disconnect();
                   ?>
                   </tbody>
