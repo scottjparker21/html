@@ -57,7 +57,7 @@
             header("Location: index.php");
         }
     } else {
-        echo "in the else ";
+        
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM product where id = ?";
