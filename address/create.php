@@ -46,7 +46,7 @@
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO address (city,state,zip,street_1,street_2) values(?, ?, ?, ?, ?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($city,$cost,$zip,$street_1,$street_2));
+            $q->execute(array($city,$state,$zip,$street_1,$street_2));
             Database::disconnect();
             header("Location: index.php");
         }
