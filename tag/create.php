@@ -21,7 +21,7 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO tag (name,) values(?)";
+            $sql = "INSERT INTO tag (name) values(?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name));
             Database::disconnect();
