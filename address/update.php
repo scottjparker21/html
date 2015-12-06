@@ -66,7 +66,7 @@
             header("Location: index.php");
         }
     } else {
-        echo "are you there?";
+        // echo "are you there?";
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "SELECT * FROM address where id = ?";
