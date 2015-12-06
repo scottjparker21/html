@@ -28,7 +28,7 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO product (name,shipment_center_id) values(?, ?)";
+            $sql = "INSERT INTO bin (name,shipment_center_id) values(?, ?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name,$shipment_center_id));
             Database::disconnect();
