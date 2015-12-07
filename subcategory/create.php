@@ -18,8 +18,8 @@
             $nameError = 'Please enter Name';
             $valid = false;
         }
-        if (empty($shipment_center_id)) {
-            $shipment_center_idError = 'Please enter Category id';
+        if (empty($category_id)) {
+            $category_idError = 'Please enter Category id';
             $valid = false;
         }
         
@@ -52,7 +52,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Create a Bin</h3>
+                        <h3>Create a Subcategory</h3>
                     </div>
              
                     <form class="form-horizontal" action="create.php" method="post">
@@ -68,7 +68,7 @@
                       <div class="control-group <?php echo !empty($category_idError)?'error':'';?>">
                         <label class="control-label">Category id</label>
                         <div class="controls">
-                            <input name="category_id" type="text" placeholder="Category id" value="<?php echo !empty($category_id)?$category_id:'';?>">
+                            <input name="category_id" type="text" placeholder="category id" value="<?php echo !empty($category_id)?$category_id:'';?>">
                             <?php if (!empty($category_idError)): ?>
                                 <span class="help-inline"><?php echo $category_idError;?></span>
                             <?php endif;?>
