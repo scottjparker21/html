@@ -21,7 +21,7 @@
          
         // keep track post values
         $name = $_POST['name'];
-        $shipment_center_id = $_POST['shipment_center_id'];
+        $category_id = $_POST['category_id'];
         
          
         // validate input
@@ -31,8 +31,8 @@
             $valid = false;
         }
          
-        if (empty($shipment_center_id)) {
-            $shipment_center_idError = 'Please enter Shipment Center id';
+        if (empty($category_id)) {
+            $category_idError = 'Please enter Category id';
             $valid = false;
         } 
          
@@ -41,9 +41,9 @@
             // echo "in the connect";
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE bin  set name = ?, shipment_center_id = ? WHERE id = ?";
+            $sql = "UPDATE subcategory  set name = ?, category_id = ? WHERE id = ?";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$shipment_center_id,$id));
+            $q->execute(array($name,$category_id,$id));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -51,12 +51,12 @@
         // echo "are you there?";
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM bin where id = ?";
+        $sql = "SELECT * FROM subcategory where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
         $name = $data['name'];
-        $shipment_center_id = $data['shipment_center_id'];
+        $category_id = $data['category_id'];
         Database::disconnect();
     }
 ?>
@@ -76,7 +76,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Update a Bin</h3>
+                        <h3>Update a Subcategory</h3>
                     </div>
              
                     <form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
@@ -89,12 +89,12 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($shipment_center_idError)?'error':'';?>">
-                        <label class="control-label">Shipment Center id</label>
+                      <div class="control-group <?php echo !empty($category_id)?'error':'';?>">
+                        <label class="control-label">Category id</label>
                         <div class="controls">
-                            <input name="shipment_center_id" type="text" placeholder="Shipment Center id" value="<?php echo !empty($shipment_center_id)?$shipment_center_id:'';?>">
-                            <?php if (!empty($shipment_center_idError)): ?>
-                                <span class="help-inline"><?php echo $shipment_center_idError;?></span>
+                            <input name="category_id" type="text" placeholder="Category id" value="<?php echo !empty($category_id)?$category_id:'';?>">
+                            <?php if (!empty($category_idError)): ?>
+                                <span class="help-inline"><?php echo $category_idError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
