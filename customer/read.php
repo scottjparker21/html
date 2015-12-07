@@ -43,6 +43,7 @@ require 'database.php';
                             </label>
                         </div>
                       </div>
+
                       <div class="control-group">
                         <label class="control-label">Last</label>
                         <div class="controls">
@@ -51,14 +52,7 @@ require 'database.php';
                             </label>
                         </div>
                       </div>
-                      <div class="control-group">
-                        <label class="control-label">Age</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['age'];?>
-                            </label>
-                        </div>
-                      </div>
+                      
                       <div class="control-group">
                         <label class="control-label">Phone</label>
                         <div class="controls">
@@ -67,6 +61,61 @@ require 'database.php';
                             </label>
                         </div>
                       </div>
+                      
+                      <div class="control-group">
+                        <label class="control-label">Date of Birth</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['dob'];?>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">Username</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['username'];?>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">Password</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['password'];?>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">Gender</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['gender'];?>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">Permission</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['permission'];?>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">Email</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <?php echo $data['email'];?>
+                            </label>
+                        </div>
+                      </div>
+                      
                         <div class="form-actions">
                           <a class="btn" href="index.php">Back</a>
                        </div>

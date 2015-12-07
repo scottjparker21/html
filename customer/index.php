@@ -20,8 +20,13 @@
                     <tr>
                       <th>First</th>
                       <th>Last</th>
-                      <th>Age</th>
 		                  <th>Phone</th>
+                      <th>Date of Birth</th>
+                      <th>Username</th>
+                      <th>Password</th>
+                      <th>Gender</th>
+                      <th>Permission</th>
+                      <th>Email</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -33,8 +38,13 @@
                             echo '<tr>';
                             echo '<td>'. $row['first'] . '</td>';
                             echo '<td>'. $row['last'] . '</td>';
-                            echo '<td>'. $row['age'] . '</td>';
                             echo '<td>'. $row['phone'] . '</td>';
+                            echo '<td>'. $row['dob'] . '</td>';
+                            echo '<td>'. $row['username'] . '</td>';
+                            echo '<td>'. $row['password'] . '</td>';
+                            echo '<td>'. $row['gender'] . '</td>';
+                            echo '<td>'. $row['permission'] . '</td>';
+                            echo '<td>'. $row['email'] . '</td>';
 			    echo '<td><a class="btn" href="read.php?id='.$row['id'].'">Read</a></td>';
                             echo '<td width=250>';
                                 echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
