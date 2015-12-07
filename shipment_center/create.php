@@ -20,7 +20,7 @@
             $valid = false;
         }
         if (empty($phone)) {
-            $costError = 'Please enter Phone';
+            $phonecostError = 'Please enter Phone';
             $valid = false;
         }
         if (empty($address_id)) {
@@ -36,7 +36,7 @@
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO shipment_center (name,phone,address_id) values(?, ?, ?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$phhone,$address_id));
+            $q->execute(array($name,$phone,$address_id));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -81,7 +81,7 @@
                         </div>
                       </div>
                       <div class="control-group <?php echo !empty($address_idError)?'error':'';?>">
-                        <label class="control-label">Description</label>
+                        <label class="control-label">Address id</label>
                         <div class="controls">
                             <input name="address_id" type="text"  placeholder="Address id" value="<?php echo !empty($address_id)?$address_id:'';?>">
                             <?php if (!empty($address_idError)): ?>
