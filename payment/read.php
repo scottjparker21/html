@@ -76,7 +76,7 @@ ini_set('display_errors', 'On');
                         <label class="control-label">Expiration Year</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['expiration_year'];?>
+                                <?php echo $data['expires_year'];?>
                             </label>
                         </div>
                       </div>
