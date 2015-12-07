@@ -1,6 +1,8 @@
 <?php
     require 'database.php';
- 
+    ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
+    
     if ( !empty($_POST)) {
         // keep track validation errors
         $card_full_nameError = null;

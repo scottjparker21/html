@@ -2,6 +2,9 @@
 
 <?php
 
+ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
+
         // DELETE PAGE
     require 'database.php';
     $id = 0;
