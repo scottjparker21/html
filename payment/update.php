@@ -34,7 +34,7 @@
         // validate input
         $valid = true;
         if (empty($card_full_name)) {
-            $nameError = 'Please enter Full Name';
+            $card_full_nameError = 'Please enter Full Name';
             $valid = false;
         }
         if (empty($card_number)) {
@@ -118,7 +118,7 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($card_number)?'error':'';?>">
+                      <div class="control-group <?php echo !empty($card_numberError)?'error':'';?>">
                         <label class="control-label">Card Number</label>
                         <div class="controls">
                             <input name="card_number" type="text" placeholder="Card Number" value="<?php echo !empty($card_number)?$card_number:'';?>">
