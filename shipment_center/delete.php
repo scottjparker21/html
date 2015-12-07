@@ -17,7 +17,7 @@
         // delete data
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM product  WHERE id = ?";
+        $sql = "DELETE FROM shipment_center  WHERE id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         Database::disconnect();
@@ -40,7 +40,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Delete a Product</h3>
+                        <h3>Delete a Shipment Center</h3>
                     </div>
                      
                     <form class="form-horizontal" action="delete.php" method="post">

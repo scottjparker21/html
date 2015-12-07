@@ -10,7 +10,7 @@
 <body>
     <div class="container">
             <div class="row">
-                <h3>Product</h3>
+                <h3>Shipment Center</h3>
             </div>
             <div class="row">
 		<p>
@@ -20,22 +20,21 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Cost</th>
-                      <th>Description</th>
-                      <th>Subcategory id</th>
+                      <th>Phone</th>
+                      <th>Address id</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
                    include 'database.php';
                    $pdo = Database::connect();
-                   $sql = 'SELECT * FROM product ORDER BY id DESC';
+                   $sql = 'SELECT * FROM shipment_center ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
                             echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['cost'] . '</td>';
-                            echo '<td>'. $row['description'] . '</td>';
-                            echo '<td>'. $row['subcategory_id'] . '</td>';
+                            echo '<td>'. $row['phone'] . '</td>';
+                            echo '<td>'. $row['address_id'] . '</td>';
+                          
                             echo '<td width=250>';
                             echo '<a class="btn btn-default " href="read.php?id='.$row['id'].'">Read</a>';
                             echo ' ';

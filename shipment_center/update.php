@@ -17,15 +17,14 @@
     if ( !empty($_POST)) {
         // keep track validation errorss
         $nameError = null;
-        $costError = null;
-        $descriptionError = null;
+        $phoneError = null;
+        $address_idError = null;
         $subidError = null;
          
         // keep track post values
         $name = $_POST['name'];
-        $cost = $_POST['cost'];
-        $description = $_POST['description'];
-        $subid = $_POST['subcategory_id'];
+        $phone = $_POST['phone'];
+        $address_id = $_POST['address_id'];
          
         // validate input
         $valid = true;
@@ -34,28 +33,25 @@
             $valid = false;
         }
          
-        if (empty($cost)) {
-            $costError = 'Please enter product cost';
+        if (empty($phone)) {
+            $phoneError = 'Please enter Phone';
             $valid = false;
         } 
          
-        if (empty($description)) {
-            $descriptionError = 'Please enter Description';
+        if (empty($address_id)) {
+            $address_idError = 'Please enter Address id';
             $valid = false;
         }
-        if (empty($subid)) {
-            $subidError = 'Please enter Subcategory id';
-            $valid = false;
-        } 
+       
          
         // update data
         if ($valid) {
             // echo "in the connect";
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE product  set name = ?, cost = ?, description = ?, subcategory_id = ?  WHERE id = ?";
+            $sql = "UPDATE shipment_center  set name = ?, phone = ?, address_id = ?  WHERE id = ?";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$cost,$description,$subid,$id));
+            $q->execute(array($name,$phone,$address_id,$id));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -63,14 +59,13 @@
         // echo "are you there?";
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM product where id = ?";
+        $sql = "SELECT * FROM shipment_center where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
         $name = $data['name'];
-        $cost = $data['cost'];
-        $description = $data['description'];
-        $subid = $data['subcategory_id'];
+        $phone = $data['phone'];
+        $address_id = $data['address_id'];
         Database::disconnect();
     }
 ?>
@@ -90,7 +85,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Update a Product</h3>
+                        <h3>Update a Shipment Center</h3>
                     </div>
              
                     <form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
@@ -103,33 +98,25 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($costError)?'error':'';?>">
-                        <label class="control-label">Cost</label>
+                      <div class="control-group <?php echo !empty($phoneError)?'error':'';?>">
+                        <label class="control-label">Phone</label>
                         <div class="controls">
-                            <input name="cost" type="text" placeholder="Cost" value="<?php echo !empty($cost)?$cost:'';?>">
-                            <?php if (!empty($costError)): ?>
-                                <span class="help-inline"><?php echo $costError;?></span>
+                            <input name="phone" type="text" placeholder="Phone" value="<?php echo !empty($phone)?$phone:'';?>">
+                            <?php if (!empty($phoneError)): ?>
+                                <span class="help-inline"><?php echo $phoneError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
-                        <label class="control-label">Description</label>
+                      <div class="control-group <?php echo !empty($address_idError)?'error':'';?>">
+                        <label class="control-label">Address id</label>
                         <div class="controls">
-                            <input name="description" type="text"  placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
-                            <?php if (!empty($descriptionError)): ?>
-                                <span class="help-inline"><?php echo $descriptionError;?></span>
+                            <input name="address_id" type="text"  placeholder="Address id" value="<?php echo !empty($address_id)?$address_id:'';?>">
+                            <?php if (!empty($address_idError)): ?>
+                                <span class="help-inline"><?php echo $address_idError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($subidError)?'error':'';?>">
-                        <label class="control-label">Subcategory Id</label>
-                        <div class="controls">
-                            <input name="subcategory_id" type="text" placeholder="Subcategory id" value="<?php echo !empty($subid)?$subid:'';?>">
-                            <?php if (!empty($subidError)): ?>
-                                <span class="help-inline"><?php echo $subidError;?></span>
-                            <?php endif;?>
-                        </div>
-                      </div>
+        
                       <div class="form-actions">
                           <button type="submit" class="btn btn-success">Update</button>
                           <a class="btn" href="index.php">Back</a>

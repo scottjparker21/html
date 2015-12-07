@@ -11,7 +11,7 @@
     } else {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-/*change*/ $sql = "SELECT * FROM product where id = ?";
+/*change*/ $sql = "SELECT * FROM shipment_center where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -33,7 +33,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Product Overview</h3>
+                        <h3>Shipment Center Overview</h3>
                     </div>
                      
                     <div class="form-horizontal" >
@@ -46,26 +46,18 @@
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Cost</label>
+                        <label class="control-label">Phone</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['cost'];?>
+                                <?php echo $data['phone'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Description</label>
+                        <label class="control-label">Address id</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['description'];?>
-                            </label>
-                        </div>
-                      </div>
-                      <div class="control-group">
-                        <label class="control-label">Subcategory id</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['subcategory_id'];?>
+                                <?php echo $data['address_id'];?>
                             </label>
                         </div>
                       </div>
