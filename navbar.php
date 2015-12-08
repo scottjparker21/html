@@ -6,7 +6,6 @@
 	        $q = $pdo->prepare($sql);
 	        $q->execute();
 	        $categories = $q->fetchAll();
-	        print_r($categories);
 	        
 	        Database::disconnect(); 
 	 ?>
