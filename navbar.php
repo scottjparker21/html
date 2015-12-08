@@ -27,7 +27,7 @@
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         				 <ul class="dropdown-menu">
         					
-        					<?php foreach ($categories as $row){?><li "<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
+        					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
         					
 
         				</ul> 
