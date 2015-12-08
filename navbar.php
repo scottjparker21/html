@@ -22,12 +22,12 @@
       			<ul class="nav navbar-nav">
        			<li><a href="index.php">Home</a></li>
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-        				<ul class="dropdown-menu">
+        				<!-- <ul class="dropdown-menu">
         					
         					<?php foreach ($categories as $row){?><li "<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
         					
 
-        				</ul>
+        				</ul> -->
         		<li><a href="cart.php">Cart</a></li>
         		<li><a href="search.php">Search</a></li>
             	<li><a href=""></a></li>
