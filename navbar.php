@@ -24,7 +24,7 @@
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         				<ul class="dropdown-menu">
         					<select name='data'>
-        					<?php foreach ($data as $row){?><option value="<?php echo $row['id'];?>"<?php if($row['id'] == $data) { ?> selected="selected"<?php } ?> ><?php echo $row['name'];?></option><?php }?> ?>
+        					<?php foreach ($data as $row){?><option value="<?php echo $row['id'];?>"<?php if($row['id'] == $data) { ?> selected="selected"<?php } ?> ><?php echo $row['name'];?></option><?php }?>
         					</select>
         				</ul>
         		<li><a href="cart.php">Cart</a></li>
