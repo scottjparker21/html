@@ -23,9 +23,10 @@
        			<li><a href="index.php">Home</a></li>
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         				<ul class="dropdown-menu">
-        					<select name='categories'>
-        					<?php foreach ($categories as $row){?><li value="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
-        					</select>
+        					
+        					<?php foreach ($categories as $row){?><li "<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
+        					
+
         				</ul>
         		<li><a href="cart.php">Cart</a></li>
         		<li><a href="search.php">Search</a></li>
