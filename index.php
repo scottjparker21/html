@@ -9,7 +9,7 @@
 				<?php
 						require 'navbar.php';
 				?>
-				
+
 				<!-- END NAVBAR -->
 
 
@@ -18,7 +18,7 @@
 				<!-- STICKY FOOTER -->
 
 				<?php
-						require 'footer.php'
+						require 'footer.php';
 				?>
 		</body>
 		</html>
