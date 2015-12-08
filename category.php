@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 		<html lang="en">
 		<head>
-			<?php require 'header.php';?>
+			<?php require 'navbar.php';?>
 		</head>
 		<body>
 
