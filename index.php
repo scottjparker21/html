@@ -5,7 +5,6 @@
 		</head>
 		<body>
 				<?php require 'header.php';?>
-
 				<!-- END NAVBAR -->
 
 
