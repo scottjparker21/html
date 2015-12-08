@@ -1,13 +1,4 @@
-	<?php
-			$pdo = Database::connect();
-	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	        $sql = "SELECT id,name FROM category ORDER BY name";
-	        $q = $pdo->prepare($sql);
-	        $q->execute());
-	        $categories = $q->fetchAll();
-	        
-	        Database::disconnect();
-	 ?>
+	
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
