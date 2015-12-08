@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 		<html lang="en">
 		<head>
 				<?php require 'header.php';?>
@@ -16,4 +16,3 @@
 				<?php require 'footer.php';?>
 		</body>
 		</html>
-
