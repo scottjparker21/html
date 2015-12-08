@@ -3,8 +3,8 @@
 	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	        $sql = "SELECT id,name FROM category ORDER BY name";
 	        $q = $pdo->prepare($sql);
-	        $q->execute(array($id));
-	        $data = $q->fetch(PDO::FETCH_ASSOC);
+	        $q->execute());
+	        $categories = $q->fetchAll();
 	        
 	        Database::disconnect();
 	 ?>
@@ -23,8 +23,8 @@
        			<li><a href="index.php">Home</a></li>
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         				<ul class="dropdown-menu">
-        					<select name='data'>
-        					<?php foreach ($data as $row){?><option value="<?php echo $row['id'];?>"<?php if($row['id'] == $data) { ?> selected="selected"<?php } ?> ><?php echo $row['name'];?></option><?php }?>
+        					<select name='categories'>
+        					<?php foreach ($categories as $row){?><option value="<?php echo $row['id'];?>"<?php if($row['id'] == $categories) { ?> selected="selected"<?php } ?> ><?php echo $row['name'];?></option><?php }?>
         					</select>
         				</ul>
         		<li><a href="cart.php">Cart</a></li>
