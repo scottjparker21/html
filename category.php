@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 		<html lang="en">
-		<head>
-			<?php require 'navbar.php';?>
-		</head>
+					<?php require 'header.php';?>
+
 		<body>
 
-			<?php require 'header.php';?>
+			<?php require 'navbar.php';?>
 
 				<!-- END NAVBAR -->
 
 
+				<p> <?php echo htmlspecialchars($_GET['catid']); ?> </p>
 
 
 				<!-- STICKY FOOTER -->
