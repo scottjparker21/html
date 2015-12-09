@@ -10,7 +10,6 @@
 				<!-- END NAVBAR -->
 
 
-				<p> <?php echo htmlspecialchars($_GET['catid']); ?> </p>
 
 
 				<!-- STICKY FOOTER -->

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+	<?php
+			require 'database.php';
+			$pdo = Database::connect();
+	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $sql = "SELECT id,name FROM category ORDER BY name";
+	        $q = $pdo->prepare($sql);
+	        $q->execute();
+	        $categories = $q->fetchAll();
+	        print_r($categories);
+	        Database::disconnect(); 
+	 ?>
+
+	<html>
+>>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -16,6 +32,7 @@
         					
         					<?php 
         					
+<<<<<<< HEAD
 						        $sql = "SELECT id,name FROM category ORDER BY name";
 						        $q = $pdo->prepare($sql);
 						        $q->execute();
@@ -32,6 +49,9 @@
 	        						*/
 	        						
         					?>
+=======
+        					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
+>>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
         					
         			</ul> 
 
