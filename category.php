@@ -16,7 +16,7 @@
 			        $catinfo = $q->fetchAll();
 			        print_r($catinfo);
 			    
-			        foreach ($subcategories as $row){?><li id="<?php echo $row['id'];?>"><a href="subcategory.php?catid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></li><?php }
+			        foreach ($subcategories as $row){?><li id="<?php echo $row['name'];?>"><a href="subcategory.php?catid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></li><?php }
         				
         			
 			        // $q = $pdo->prepare($sql);
