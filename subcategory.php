@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 		<html lang="en">
 						<?php require 'navbar.php';?>
+
+						<p> <?php echo "<p>" . $_GET['subcatid'] . "</p>"; ?> 
 		
 		<body>
 				<?php require 'header.php';?>
 
 
 				<?php	
-					
+					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT id, name FROM product where subcategory_id = ? ";
 			        $q = $pdo->prepare($sql);
