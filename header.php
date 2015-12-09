@@ -1,8 +1,4 @@
-	<?php
-		require 'database.php';
-		$pdo = Database::connect();
-	    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	?>
+
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 	<?php
 			require 'database.php';
 			$pdo = Database::connect();
@@ -13,7 +12,6 @@
 	 ?>
 
 	<html>
->>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -30,32 +28,9 @@
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         			<ul class="dropdown-menu">
         					
-<<<<<<< HEAD
-        					<?php 
-=======
+
+    
         					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
->>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
-        					
-<<<<<<< HEAD
-						        $sql = "SELECT id,name FROM category ORDER BY name";
-						        $q = $pdo->prepare($sql);
-						        $q->execute();
-						        $categories = $q->fetchAll();
-						        print_r($categories);
-	        					
-	        					/*
-	        					foreach ($categories as $row){ 
-	        						echo '<li id="' . $row['id'] . '">';
-	        						echo '<a href="category.php/?catid=' . $row['id'] . '">';
-	        						echo $row['name'];
-	        						echo '</a>';
-	        						echo '</li>';
-	        						*/
-	        						
-        					?>
-=======
-        					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
->>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
         					
         			</ul> 
 
