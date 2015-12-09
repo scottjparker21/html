@@ -10,7 +10,7 @@
 			        $sql = "SELECT * FROM product where id = ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
-			        $data = $q->fetch(PDO::FETCH_ASSOC);
+			        $data = $q->fetchAll();
 			        $name = $data['name'];
 			        $cost = $data['cost'];
 			        $description = $data['description']; 
