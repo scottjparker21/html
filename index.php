@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-		<html lang="en">
-		<head>
-				<?php require 'navbar.php';?>
-		</head>
+	<html lang="en">
+		<?php require 'header.php';?>
 		<body>
-				<?php require 'header.php';?>
-				<!-- END NAVBAR -->
+			<?php require 'navbar.php';?>
 
 
 
 
-				<!-- STICKY FOOTER -->
 
-				<?php require 'footer.php';?>
+			<?php require 'footer.php';?>
 		</body>
-		</html>
+	</html>
 

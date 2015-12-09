@@ -1,16 +1,4 @@
-	<?php
-			require 'database.php';
-			$pdo = Database::connect();
-	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	        $sql = "SELECT id,name FROM category ORDER BY name";
-	        $q = $pdo->prepare($sql);
-	        $q->execute();
-	        $categories = $q->fetchAll();
-	        // print_r($categories);
-	        Database::disconnect(); 
-	 ?>
 
-	<html>
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -27,16 +15,22 @@
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         				 <ul class="dropdown-menu">
         					
-        					<?php foreach ($categories as $row){ ?>
+        					<?php 
+						        $sql = "SELECT id,name FROM category ORDER BY name";
+						        $q = $pdo->prepare($sql);
+						        $q->execute();
+						        $categories = $q->fetchAll();
+						        // print_r($categories);
+	        					foreach ($categories as $row){ 
+        					?>
         						<li id="<?php echo $row['id'];?>">
         							<a href="category.php/?catid=<?php echo $row['id'];?>">
         								<?php echo $row['name']; }?> 
         							</a>
         						</li>
         					
-        					
-
         				</ul> 
+
         		<li><a href="cart.php">Cart</a></li>
         		<li><a href="search.php">Search</a></li>
             	<li><a href=""></a></li>
@@ -48,5 +42,5 @@
     		</div>
   		</div>
 	</nav>
-	</html>
+
 
