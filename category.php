@@ -16,11 +16,18 @@
 			        $catinfo = $q->fetchAll();
 			        // print_r($catinfo);
 			    
-			        foreach ($subcategories as $row){?><a href="<?php echo $row['id'];?>">"<?php echo $row['name'];?>"</a><?php } ?>
+			?>
+					<h3> Subcategories </h3>
+
+			       <?php foreach ($subcategories as $row){?>
+
+			       				<a href="subcategory.php?catid=<?php echo $row['id'];?>">"<?php echo $row['name'];?>"</a>
+
+			       	<?php } ?>
         											
         			
        
-			?>
+			
 
 			<?php require 'footer.php';?>
 		</body>
