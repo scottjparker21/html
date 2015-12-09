@@ -1,4 +1,3 @@
-
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -16,12 +15,14 @@
         			<ul class="dropdown-menu">
         					
         					<?php 
-        					/*
+        					
 						        $sql = "SELECT id,name FROM category ORDER BY name";
 						        $q = $pdo->prepare($sql);
 						        $q->execute();
 						        $categories = $q->fetchAll();
-						        // print_r($categories);
+						        print_r($categories);
+	        					
+	        					/*
 	        					foreach ($categories as $row){ 
 	        						echo '<li id="' . $row['id'] . '">';
 	        						echo '<a href="category.php/?catid=' . $row['id'] . '">';
@@ -29,6 +30,7 @@
 	        						echo '</a>';
 	        						echo '</li>';
 	        						*/
+	        						
         					?>
         					
         			</ul> 
@@ -44,5 +46,3 @@
     		</div>
   		</div>
 	</nav>
-
-
