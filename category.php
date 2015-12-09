@@ -6,6 +6,31 @@
 
 				<p> <?php echo "<p>" . $_GET['catid'] . "</p>"; ?> 
 
+			<?php	
+					// $id = $_GET['catid'];
+			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			        $sql = "SELECT * FROM category where id = $GET['catid']";
+			        $q = $pdo->prepare($sql);
+			        $q->execute()
+
+			        $catinfo = $q->fetchAll();
+			        print_r($catinfo);
+
+			        // $q = $pdo->prepare($sql);
+			        // $q->execute(array($id));
+			        // $data = $q->fetch(PDO::FETCH_ASSOC);
+			        // $first = $data['first'];
+			        // $last = $data['last'];
+			        // $phone = $data['phone'];
+			        // $dob = $data['dob'];
+			        // $username = $data['username'];
+			        // $password = $data['password'];
+			        // $gender = $data['gender'];
+			        // $permission = $data['permission'];
+			        // $email = $data['email'];
+       
+			?>
+
 			<?php require 'footer.php';?>
 		</body>
 	</html>
