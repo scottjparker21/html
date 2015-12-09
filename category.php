@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-		<html lang="en">
-					<?php require 'header.php';?>
-
+	<html lang="en">
+		<?php require 'header.php';?>
 		<body>
-
 			<?php require 'navbar.php';?>
 
-				<!-- END NAVBAR -->
+				<p> <?php echo "<p>" . $_GET['catid'] . "</p>"; ?> 
 
-
-				<p> <?php echo htmlspecialchars($_GET['catid']); ?> </p>
-
-
-				<!-- STICKY FOOTER -->
-
-				<?php require 'footer.php';?>		
+			<?php require 'footer.php';?>
 		</body>
-		</html>
+	</html>
+
