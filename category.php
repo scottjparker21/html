@@ -9,9 +9,9 @@
 			<?php	
 					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM category where id = $id ";
+			        $sql = "SELECT * FROM category where id = ? ";
 			        $q = $pdo->prepare($sql);
-			        $q->execute()
+			        $q->execute(array($id));
 
 			        $catinfo = $q->fetchAll();
 			        print_r($catinfo);
