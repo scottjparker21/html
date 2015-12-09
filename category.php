@@ -19,20 +19,6 @@
 			        foreach ($subcategories as $row){?><a href="<?php echo $row['id'];?>">"<?php echo $row['name'];?>"</a><?php } ?>
         											
         			
-
-
-			        // $q = $pdo->prepare($sql);
-			        // $q->execute(array($id));
-			        // $data = $q->fetch(PDO::FETCH_ASSOC);
-			        // $first = $data['first'];
-			        // $last = $data['last'];
-			        // $phone = $data['phone'];
-			        // $dob = $data['dob'];
-			        // $username = $data['username'];
-			        // $password = $data['password'];
-			        // $gender = $data['gender'];
-			        // $permission = $data['permission'];
-			        // $email = $data['email'];
        
 			?>
 
