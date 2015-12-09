@@ -14,7 +14,7 @@
 			        $q->execute(array($id));
 
 			        $catinfo = $q->fetchAll();
-			        print_r($catinfo);
+			        // print_r($catinfo);
 			    
 			        foreach ($subcategories as $row){?><a href="<?php echo $row['id'];?>">"<?php echo $row['name'];?>"</a><?php } ?>
         											
