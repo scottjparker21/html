@@ -13,7 +13,7 @@
       			<ul class="nav navbar-nav">
        			<li><a href="index.php">Home</a></li>
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-        				 <ul class="dropdown-menu">
+        			<ul class="dropdown-menu">
         					
         					<?php 
 						        $sql = "SELECT id,name FROM category ORDER BY name";
@@ -22,14 +22,14 @@
 						        $categories = $q->fetchAll();
 						        // print_r($categories);
 	        					foreach ($categories as $row){ 
+	        						echo '<li id="' . $row['id'] . '">';
+	        						echo '<a href="category.php/?catid=' . $row['id'] . '">';
+	        						echo $row['name'];
+	        						echo '</a>';
+	        						echo '</li>';
         					?>
-        						<li id="<?php echo $row['id'];?>">
-        							<a href="category.php/?catid=<?php echo $row['id'];?>">
-        								<?php echo $row['name']; }?> 
-        							</a>
-        						</li>
         					
-        				</ul> 
+        			</ul> 
 
         		<li><a href="cart.php">Cart</a></li>
         		<li><a href="search.php">Search</a></li>
