@@ -30,7 +30,11 @@
         		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
         			<ul class="dropdown-menu">
         					
+<<<<<<< HEAD
         					<?php 
+=======
+        					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><?php echo $row['name'];?></li><?php }?>
+>>>>>>> parent of 1ca99ae... pushing staging to AWS through Github
         					
 <<<<<<< HEAD
 						        $sql = "SELECT id,name FROM category ORDER BY name";
