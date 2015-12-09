@@ -9,7 +9,7 @@
 			<?php	
 					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM category where id = ? ";
+			        $sql = "SELECT * FROM subcategory where id = ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 
