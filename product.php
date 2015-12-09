@@ -15,7 +15,7 @@
 			        $cost = $data['cost'];
 			        $description = $data['description']; 
 			        // print_r($catinfo);
-			    print_r($data);
+			    print_r($name, $cost, $description);
 			?>
 					<h3> Products </h3>
 
