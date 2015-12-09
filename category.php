@@ -7,9 +7,9 @@
 				<p> <?php echo "<p>" . $_GET['catid'] . "</p>"; ?> 
 
 			<?php	
-					// $id = $_GET['catid'];
+					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM category where id = $GET['catid']";
+			        $sql = "SELECT * FROM category where id = $id ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute()
 
