@@ -16,6 +16,7 @@
         			<ul class="dropdown-menu">
         					
         					<?php 
+        					/*
 						        $sql = "SELECT id,name FROM category ORDER BY name";
 						        $q = $pdo->prepare($sql);
 						        $q->execute();
@@ -27,6 +28,7 @@
 	        						echo $row['name'];
 	        						echo '</a>';
 	        						echo '</li>';
+	        						*/
         					?>
         					
         			</ul> 
