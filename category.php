@@ -21,7 +21,7 @@
 
 			       <?php foreach ($subcategories as $row){?>
 
-			       				<a href="subcategory.php?catid=<?php echo $row['id']?>"?><?php echo $row['name'];?></a>
+			       				{?><li id="<?php echo $row['id'];?>"><a href="subcategory.php?catid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
 
 			       	<?php } ?>
         											
