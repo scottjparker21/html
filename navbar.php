@@ -33,7 +33,7 @@
         								<?php echo $row['name']; ?>
         							</a>
         						</li>
-        					<?php }?>
+        					
         					
 
         				</ul> 
