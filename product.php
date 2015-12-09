@@ -2,10 +2,14 @@
 	<html lang="en">
 		<?php require 'header.php';?>
 		<body>
+
+									<p> <?php echo "<p>" . $_GET['productid'] . "</p>"; ?> 
+
+
 			<?php require 'navbar.php';?>
 
 				<?php	
-					$id = $_GET['subcatid'];
+					$id = $_GET['productid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT * FROM product where id = ? ";
 			        $q = $pdo->prepare($sql);
