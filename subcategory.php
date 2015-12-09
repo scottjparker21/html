@@ -9,9 +9,9 @@
 
 
 				<?php	
-					$id = $_GET['catid'];
+					$id = $_GET['subcatid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT id, name FROM product where subcategory_id = ? ";
+			        $sql = "SELECT * FROM product where subcategory_id = ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 
