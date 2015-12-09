@@ -13,7 +13,7 @@
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 
-			        $catinfo = $q->fetchAll();
+			        $subcategories = $q->fetchAll();
 			        // print_r($catinfo);
 			    
 			?>
