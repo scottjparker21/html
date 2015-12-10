@@ -11,7 +11,7 @@
 				<?php	
 					$id = $_GET['productid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM product where id = ? ";
+			        $sql = "SELECT * FROM product WHERE id = ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 			        $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -20,6 +20,23 @@
 			        $description = $data['description']; 
 			        // print_r($catinfo);
 			    // echo $name;
+			?>
+
+			<?php
+					$id = $_GET['productid'];
+					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$sql = "SELECT * FROM image WHERE id = ?";
+					$q = $pdo->prepare($sql);
+					$q->execute(array($id));
+				    $data = $q->fetch(PDO::FETCH_ASSOC);
+					$image = $data['image'];
+
+					echo $image;
+
+
+
+
+
 			?>
 					<h3> Product </h3>
 
