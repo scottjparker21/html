@@ -12,5 +12,5 @@ $( document ).ready(function() {
                         search();
 	// call search on input change
 							}
-					}		
+					});		
 });
