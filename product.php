@@ -25,7 +25,7 @@
 			<?php
 					$id = $_GET['productid'];
 					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-					$sql = "SELECT * FROM image WHERE id = ?";
+					$sql = "SELECT * FROM image WHERE product_id = ?";
 					$q = $pdo->prepare($sql);
 					$q->execute(array($id));
 				    $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -48,9 +48,8 @@
 
 			       	<p> <?php echo $description; ?> </p>
 
-			     	 <p><?php echo $image;
-					echo $imagedescription; ?>
-					</p>
+			     	 <p> <?php echo $imagedescription; ?> </p>
+
 
 
 
