@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		});
 	}
 		$('#search').keyup(function(e) {
-                     if(e.keyCode == 13) {
+                     if(e.keyCode !=='') {
                         search();
 	// call search on input change
 
