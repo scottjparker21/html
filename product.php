@@ -30,8 +30,10 @@
 					$q->execute(array($id));
 				    $data = $q->fetch(PDO::FETCH_ASSOC);
 					$image = $data['image'];
+					$description = $data['description'];
 
 					echo $image;
+					echo $description;
 
 
 
