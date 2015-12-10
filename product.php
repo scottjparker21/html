@@ -14,7 +14,7 @@
 			        $sql = "SELECT * FROM product where id = ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
-			        $data = $q->fetchAll();
+			        $data = $q->fetch(PDO::FETCH_ASSOC);
 			        $name = $data['name'];
 			        $cost = $data['cost'];
 			        $description = $data['description']; 
@@ -23,7 +23,7 @@
 			?>
 					<h3> Products </h3>
 
-			       <?php echo $name, $cost, $description; ?>
+			       <?php echo $name $cost $description; ?>
 
 
 
