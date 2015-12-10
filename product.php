@@ -44,7 +44,7 @@
 
 			     	 <p> <?php echo $imagedescription; ?> </p>
 
-			     	 <img src="data:image/jpeg;base64,<?php echo base64_encode( $image ); ?>" />
+			     	 <img src="data:image/jpeg;base64,<?php echo base64_encode( $image ); ?>" width="100px"/>
 
 
 
