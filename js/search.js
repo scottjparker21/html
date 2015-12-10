@@ -11,5 +11,6 @@ $( document ).ready(function() {
                      if(e.keyCode !=='') {
                         search();
 	// call search on input change
+						}
 
 });
