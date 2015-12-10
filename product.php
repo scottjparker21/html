@@ -3,9 +3,6 @@
 		<?php require 'header.php';?>
 		<body>
 
-									<p> <?php echo "<p>" . $_GET['productid'] . "</p>"; ?> 
-
-
 			<?php require 'navbar.php';?>
 
 				<?php	
