@@ -1,6 +1,15 @@
-<script>
-function goTo()
-{
-    location.href = document.getElementById('link_id').value;
-}
-</script>
+
+$( document ).ready(function() {
+
+
+	function search (){
+		$.get( "test.php?vari=4", function( data ) {
+		  	alert( "Data Loaded: " + data );
+		});
+	}
+		$('#search').keyup(function(e) {
+                     if(e.keyCode == 13) {
+                        search();
+	// call search on input change
+
+});

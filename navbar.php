@@ -38,7 +38,7 @@
     			<ul class="nav navbar-nav navbar-right">
             <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Search">
+                          <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
                 </form>
       			</ul>
