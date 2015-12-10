@@ -22,17 +22,23 @@
     		</div>
     		<div class="collapse navbar-collapse" id="myNavbar">
       			<ul class="nav navbar-nav">
-       			<li><a href="index.php">Home</a></li>
-        		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-        			<ul class="dropdown-menu">
-        					
-        					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><a href="category.php?catid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></li><?php }?>
-        					
-        			</ul> 
+           			<li><a href="index.php">Home</a></li>
+            		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+            			<ul class="dropdown-menu">
+            					
+            					<?php foreach ($categories as $row){?><li id="<?php echo $row['id'];?>"><a href="category.php?catid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></li><?php }?>
+            					
+            			</ul> 
 
-        		<li><a href="cart.php">Cart</a></li>
-        		<li><a href="search.php">Search</a></li>
-            	<li><a href=""></a></li>
+            		<li><a href="cart.php">Cart</a></li>
+            		<li><a href="search.php">Search</a></li>
+                	<li><a href=""></a></li>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
       			</ul>
     			<ul class="nav navbar-nav navbar-right">
         		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
