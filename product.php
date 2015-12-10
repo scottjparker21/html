@@ -23,7 +23,7 @@
 			?>
 					<h3> Products </h3>
 
-			       <?php echo $name $cost $description; ?>
+			       <?php echo $name; ?>
 
 
 
