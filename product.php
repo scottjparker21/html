@@ -21,9 +21,13 @@
 			        // print_r($catinfo);
 			    // echo $name;
 			?>
-					<h3> Products </h3>
+					<h3> Product </h3>
 
-			       <?php echo $name; ?>
+			       <h4> <?php echo $name; ?> </h4>
+
+			       <p> <?php echo $cost; ?> </p>
+
+			       <p> <?php echo $description; ?> </p>
 
 
 
