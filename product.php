@@ -19,15 +19,11 @@
 			        $cost = $data['cost'];
 			        $description = $data['description']; 
 			        // print_r($catinfo);
-			    echo $name;
+			    // echo $name;
 			?>
 					<h3> Products </h3>
 
-			       <?php foreach ($product as $row){?>
-
-			       				{?><li id="<?php echo $row['id'];?>"><a href="product.php?subcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
-
-			       	<?php } ?>
+			       <?php echo $name, $cost, $description; ?>
 
 
 
