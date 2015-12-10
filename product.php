@@ -32,8 +32,7 @@
 					$image = $data['image'];
 					$imagedescription = $data['description'];
 
-					echo $image;
-					echo $imagedescription;
+
 					
 
 
@@ -43,12 +42,15 @@
 			?>
 					<h3> Product </h3>
 
-			       <h4> <?php echo $name; ?> </h4>
+			      	 <h4> <?php echo $name; ?> </h4>
 
-			       <p> <?php echo $cost; ?> </p>
+			       	<p> <?php echo $cost; ?> </p>
 
-			       <p> <?php echo $description; ?> </p>
+			       	<p> <?php echo $description; ?> </p>
 
+			     	 <p><?php echo $image;
+					echo $imagedescription; ?>
+					</p>
 
 
 
