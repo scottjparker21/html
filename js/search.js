@@ -13,4 +13,4 @@ $( document ).ready(function() {
 	// call search on input change
 						}
 
-});
+
