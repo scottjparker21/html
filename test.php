@@ -6,14 +6,13 @@
 
 
 					$pdo = Database::connect();
-					//$id = $_GET['entry'];
-					$id = "a";
+					$id = $_GET['entry'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT * FROM product WHERE name  LIKE ? ";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 
-			        $product = $q->fetchAll();
+			     //   $product = $q->fetchAll();
 			        Database::disconnect(); 
 
 					// echo $_GET['entry'];
