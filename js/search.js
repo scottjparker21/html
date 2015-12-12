@@ -3,15 +3,13 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-		console.log(inp);
 		$.get( "test.php?entry=" + inp, function( data ) {
-		  	console.log( "Data Loaded: " + data );
+		  	console.log( "Data returned: " + data );
 		});
 	}
 
 	$('#search').keyup(function() {
 		var entry = $(this).val();
-		console.log(entry);
         if(entry !== '' && entry !== null) {
             search(entry);
 		}
