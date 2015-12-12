@@ -1,5 +1,5 @@
 <html>
 
-	<p><?php $_GET['catid'];?></p>
+	<p><?php $_GET['inp'];?></p>
 
 </html>
