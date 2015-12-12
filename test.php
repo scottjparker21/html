@@ -11,7 +11,7 @@
 						        $product = $q->fetchAll();
 						        Database::disconnect(); 
 
-						        echo $id;
+						        echo($id);
 			        				    
 					?>
 
