@@ -6,7 +6,8 @@
 
 
 					$pdo = Database::connect();
-					$id = $_GET['entry'];
+					//$id = $_GET['entry'];
+					$id = "a";
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT * FROM product WHERE name  LIKE ? ";
 			        $q = $pdo->prepare($sql);
