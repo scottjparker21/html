@@ -1,8 +1,8 @@
 <?php
 
-	<p> <?php echo "<p>" . $_GET['catid'] . "</p>"; ?>
+	 echo "<p>" . $_GET['catid'] . "</p>"; 
 
-	
+
 	
 
 
