@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
 
 	function search (inp){
+		console.log(inp);
 		$.get( "test.php?entry=" + inp, function( data ) {
 		  	console.log( "Data Loaded: " + data );
 		});
