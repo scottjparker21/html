@@ -2,7 +2,7 @@
 
 <?php
 
-		echo $_GET['inp'];
+		echo $_GET['entry'];
 
 		?>
 						       
