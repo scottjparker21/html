@@ -3,7 +3,7 @@
 			<?php
 
 					echo "hello";
-/*
+
 
 					$pdo = Database::connect();
 					$id = $_GET['entry'];
@@ -16,7 +16,7 @@
 			        Database::disconnect(); 
 
 					// echo $_GET['entry'];
-
+/*
 		       		foreach ($product as $row){ 
 			       		echo "<li id='" . $row['id'] . "'>";
 			       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
