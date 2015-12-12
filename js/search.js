@@ -11,6 +11,7 @@ $( document ).ready(function() {
 
 	$('#search').keyup(function() {
 		var entry = $(this).val();
+		console.log(entry);
         if(entry !== '' && entry !== null) {
             search(entry);
 		}
