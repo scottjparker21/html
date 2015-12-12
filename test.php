@@ -3,8 +3,7 @@
 			<?php
 
 					$pdo = Database::connect();
-					$got = $_GET['entry'] ;
-					$id = $got;
+					$id = $_GET['entry'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT * FROM product WHERE name  LIKE ? ";
 			        $q = $pdo->prepare($sql);
@@ -15,28 +14,11 @@
 
 					// echo $_GET['entry'];
 
+		       		foreach ($product as $row){ 
+			       		echo "<li id='" . $row['id'] . "'>";
+			       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
+			       		echo $row['name'];
+			       		echo "</a>";
+		       		} 
 			?>
-				<html>
-
-					
-			        <?php 
-			       		foreach ($product as $row){ 
-				       		echo "<li id='" . $row['id'] . "'>";
-				       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
-				       		echo $row['name'];
-				       		echo "</a>";
-			       		} 
-			       	?>
-
-			    </html>
-
-
-		
-						       
-
-
-
-
-
-
 
