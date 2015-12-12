@@ -23,6 +23,8 @@
 			       		echo $row['name'];
 			       		echo "</a>";
 		       		} 
+
+		       		echo "i worked";
 		       		
 			?>
 
