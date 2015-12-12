@@ -12,7 +12,4 @@
 			        // print_r($catinfo);
 			    
 		
-			        foreach ($product as $row){?>
-
-			       				{?><li id="<?php echo $row['id'];?>"><a href="product.php?productid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
- } ?>
+	?>
