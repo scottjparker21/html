@@ -2,6 +2,7 @@
 
 <?php
 
+					$pdo = Database::connect();
 					$id = '%' . $_GET['entry'] . "%";
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			        $sql = "SELECT * FROM product WHERE name  LIKE ? ";
@@ -9,6 +10,7 @@
 			        $q->execute(array($id));
 
 			        $product = $q->fetchAll();
+			        Database::disconnect(); 
 
 					// echo $_GET['entry'];
 
