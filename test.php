@@ -11,17 +11,13 @@
 						        $product = $q->fetchAll();
 						        Database::disconnect(); 
 
-						        $response = '';
+						        $response = 'hello';
+
+						        echo $response;
 
 						        ?>
 
-						       <?php foreach ($product as $row){?>
-
-			       				{?><li id="<?php echo $row['id'];?>"><a href="product.php?productid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
-
-			       	<?php } ?>
-			        				    
-					
+						       
 
 
 
