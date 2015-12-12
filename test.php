@@ -13,7 +13,7 @@
 
 						        $response = 'hello';
 
-						        echo $response;
+						        echo "Response: " . $response;
 
 						        ?>
 
