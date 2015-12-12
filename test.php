@@ -1,5 +1,5 @@
 
-		
+		<!-- 
 					 <?php	
 								$pdo = Database::connect();
 								$id = $_GET['inp'];
@@ -15,8 +15,14 @@
 
 						        echo "Response: " . $response;
 
-						        ?>
+						        ?> -->
 
+<?php
+
+		$id = $_GET['inp'];
+		echo $id;
+
+		?>
 						       
 
 
