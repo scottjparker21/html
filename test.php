@@ -1,9 +1,5 @@
-<?php
+<html>
 
-	 echo "<p>" . $_GET['catid'] . "</p>"; 
+	<p><?php $_GET['catid'];?></p>
 
-
-	
-
-
-?>
+</html>
