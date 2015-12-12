@@ -23,6 +23,6 @@
 			       		echo $row['name'];
 			       		echo "</a>";
 		       		} 
-		       		*/
+		       		
 			?>
 
