@@ -11,9 +11,19 @@
 						        $product = $q->fetchAll();
 						        Database::disconnect(); 
 
-						        echo($id);
+						        $response = '';
+
+						        foreach ( $product as $row ) {
+
+						        	$response .=  echo $row['name'];
+
+						        }
+
+						        
+						        echo $response;
 			        				    
 					?>
+
 
 
 
