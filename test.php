@@ -2,6 +2,9 @@
 
 			<?php
 
+					echo "hello";
+/*
+
 					$pdo = Database::connect();
 					$id = $_GET['entry'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -20,5 +23,6 @@
 			       		echo $row['name'];
 			       		echo "</a>";
 		       		} 
+		       		*/
 			?>
 
