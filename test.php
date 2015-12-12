@@ -2,8 +2,7 @@
 
 <?php
 
-		$id = $_GET['inp'];
-		echo $id;
+		echo $_GET['inp'];
 
 		?>
 						       
