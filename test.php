@@ -17,21 +17,15 @@
 			        Database::disconnect(); 
 
 					// echo $_GET['entry'];
-					?>
-					<html>
-						<div class="search">
-							<?php	
 
-						       		foreach ($product as $row){ 
-							       		echo "<li id='" . $row['id'] . "'>";
-							       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
-							       		echo $row['name'];
-							       		echo "</a>";
-						       		} 
-				       		?>
-		       			</div>
-		       		</html>
+		       		foreach ($product as $row){ 
+			       		echo "<li id='" . $row['id'] . "'>";
+			       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
+			       		echo $row['name'];
+			       		echo "</a>";
+		       		} 
+
 		       		echo "i worked";
 		       		
-			
+			?>
 
