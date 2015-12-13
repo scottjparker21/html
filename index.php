@@ -4,6 +4,8 @@
 		<body>
 			<?php require 'navbar.php';?>
 
+				<div class="search">
+				</div>	
 
 
 
