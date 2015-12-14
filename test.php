@@ -21,7 +21,7 @@
 			       	   $results .= "<li id='" . $row['id'] . "'>";
 			       	   $results .= "<a href='product.php?productid='" . $row['id'] . "'>";
 			       	   $results .= $row['name'];
-			       	   $reults .= "</a>";
+			       	   $results .= "</a>";
 		       		} 
 
 		       		echo $results;
