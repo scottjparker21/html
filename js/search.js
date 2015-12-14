@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-			if (data != null) {
+			if (inp != null) {
 				$.get( "test.php?entry=" + inp, function( data ) {
 				  		$( ".search" ).append( data);
 				});
