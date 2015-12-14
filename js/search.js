@@ -8,7 +8,7 @@ $( document ).ready(function() {
 				  		$( ".search" ).append( data);
 				});
 			}
-			else if (inp = null){
+			else if (inp = ''){
 				$( ".search" ).append('Could not find in database');
 			}
 	}
