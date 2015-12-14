@@ -4,7 +4,8 @@ $( document ).ready(function() {
 
 	function search (inp){
 		$.get( "test.php?entry=" + inp, function( data ) {
-		  	console.log( "Data returned: " + data );
+		  	// console.log( "Data returned: " + data );
+		  	$( ".search" ).append( data);
 		});
 	}
 
