@@ -3,17 +3,13 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-			if (inp != null) {
-				$.get( "test.php?entry=" + inp, function( data ) {
-				  		$( ".search" ).append( data);
-				});
-			}
-			else if (inp = ''){
-				$( ".search" ).append('Could not find in database');
-			}
+		$.get( "test.php?entry=" + inp, function( data ) {
+		  		$( ".search" ).html( data);
+		});
 	}
 
 	$('#search').keyup(function() {
+
 		var entry = $(this).val();
         if(entry !== '' && entry !== null) {
             search(entry);
@@ -21,7 +17,6 @@ $( document ).ready(function() {
 	});		
 
 });
-
 
 
 
@@ -36,6 +31,7 @@ if the php doesn't echo any products, dusplay "no results"
 if the search bar is empty, replace the contents of the page from the temp variable and set the variable to null
 
 
-
+use on instead of keyup (on change)
+as soon as empty string call function
 
 */
