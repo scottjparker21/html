@@ -24,6 +24,7 @@ $( document ).ready(function() {
 
 
 
+
 /*
 user changes search input
 a function grabs the new value on change
