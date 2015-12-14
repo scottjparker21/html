@@ -3,10 +3,14 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-		$.get( "test.php?entry=" + inp, function( data ) {
-		  	// console.log( "Data returned: " + data );
-		  	$( ".search" ).append( data);
-		});
+			if (data != null) {
+				$.get( "test.php?entry=" + inp, function( data ) {
+				  		$( ".search" ).append( data);
+				});
+			}
+			else {
+				echo "Couldn't find anything in our database."
+			}
 	}
 
 	$('#search').keyup(function() {
