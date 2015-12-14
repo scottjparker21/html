@@ -9,7 +9,7 @@ $( document ).ready(function() {
 				});
 			}
 			else {
-				echo "Couldn't find anything in our database."
+				$( ".search" ).append('Could not find in database');
 			}
 	}
 
