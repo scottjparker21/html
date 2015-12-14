@@ -2,8 +2,6 @@
 
 			<?php
 
-					echo "hello";
-
 					require 'database.php';
 					$pdo = Database::connect();
 					$got = $_GET['entry'];
@@ -17,15 +15,16 @@
 			        Database::disconnect(); 
 
 					// echo $_GET['entry'];
+					$results = "";
 
 		       		foreach ($product as $row){ 
-			       		echo "<li id='" . $row['id'] . "'>";
-			       		echo "<a href='product.php?productid='" . $row['id'] . "'>";
-			       		echo $row['name'];
-			       		echo "</a>";
+			       	   $results .= "<li id='" . $row['id'] . "'>";
+			       	   $results .= "<a href='product.php?productid='" . $row['id'] . "'>";
+			       	   $results .= $row['name'];
+			       	   $reults .= "</a>";
 		       		} 
 
-		       		echo "i worked";
+		       		echo $results;
 		       		
 			?>
 
