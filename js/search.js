@@ -15,6 +15,7 @@ $( document ).ready(function() {
 		if (entry === empty){
 			console.log('empty');
 			$( "#content" ).show();
+			$(".results").hide();
 
 		}
         else if(entry !== '' && entry !== null) {
