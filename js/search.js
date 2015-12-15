@@ -11,10 +11,10 @@ $( document ).ready(function() {
 
 	$('#search').keyup(function() {
 		var empty = '';
+		var entry = $(this).val();
 		if (inp === empty){
 			console.log('empty');
 		}
-		var entry = $(this).val();
         else if(entry !== '' && entry !== null) {
             	search(entry);
 		}
