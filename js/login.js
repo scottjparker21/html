@@ -7,7 +7,7 @@ $( document ).ready(function() {
 		});
 	}
 
-	$('#').click(function() {
+	$('#send').click(function() {
 			var username = $("#user").val()
 			var password = $("#pass").val()
 			console.log(username);
