@@ -14,8 +14,12 @@ $( document ).ready(function() {
 
 		if (entry === empty){
 			console.log('empty');
+			$( "#container" ).show();
+
 		}
         else if(entry !== '' && entry !== null) {
+        	$( "#container" ).hide();
+        	$( ".results" ).show();
             	search(entry);
 		}
 	});		
