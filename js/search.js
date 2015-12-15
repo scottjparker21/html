@@ -13,12 +13,13 @@ $( document ).ready(function() {
 		var entry = $(this).val();
 
 		if (entry === empty){
-			console.log('empty');
+			
 			$( "#content" ).show();
 			$(".results").hide();
 
 		}
         else if(entry !== '' && entry !== null) {
+        	
         	$( "#content" ).hide();
         	$( ".results" ).show();
             	search(entry);
