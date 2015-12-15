@@ -12,8 +12,7 @@ $( document ).ready(function() {
 			var password = $("#inputPass").val();
 			console.log('here i am lord');
 
-			logmein(username,password);
-		}	
+			logmein(username,password);	
 	});
 });
 
