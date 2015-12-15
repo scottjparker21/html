@@ -6,12 +6,30 @@
 		<body>
 				<?php require 'header.php';?>
 
-				<!-- END NAVBAR -->
+				<form class="form-horizontal">
+  					<div class="control-group">
+    					<label class="control-label" for="inputUser">Username</label>
+	   						<div class="controls">
+	      						<input type="text" id="inputUser" placeholder="Username">
+    						</div>
+ 					</div>
+  						<div class="control-group">
+    						<label class="control-label" for="inputPassword">Password</label>
+    							<div class="controls">
+     					 			<input type="password" id="inputPassword" placeholder="Password">
+    							</div>
+ 					 	</div>
+  						<div class="control-group">
+    							<div class="controls">
+      								<label class="checkbox">
+        								<input type="checkbox"> Remember me
+      								</label>
+      								<button type="submit" class="btn">Sign in</button>
+    							</div>
+  						</div>
+				</form>
 
 
-
-
-				<!-- STICKY FOOTER -->
 
 				<?php require 'footer.php';?>
 		</body>
