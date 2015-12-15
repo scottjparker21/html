@@ -7,9 +7,9 @@ $( document ).ready(function() {
 		});
 	}
 
-	$('#submit').click(function() {
-			var username = $("#username").val()
-			var password = $("#password").val()
+	$('#send').click(function() {
+			var username = $("#user").val()
+			var password = $("#pass").val()
 			console.log(username);
 			console.log(password);
 
