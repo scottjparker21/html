@@ -1,17 +1,17 @@
 
 $( document ).ready(function() {
 
-	function login(user,pass) {
-		$.get("validate.php?username=" + user + "&password=" + pass , function (data) {
-			console.log(data);
-		});
-	}
+	
 
 	$('#send').click(function() {
+		console.log('here i am lord');
 			var username = $("#inputUser").val();
 			var password = $("#inputPass").val();
-			console.log('here i am lord');
-			login(username,password);
+			
+			
+		$.get("validate.php?username=" + username + "&password=" + password , function (data) {
+			console.log(data);
+	}
 				
 	});
 });
