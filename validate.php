@@ -1,15 +1,17 @@
 <?php
 	
 			require 'database.php';
+			$user = $_GET['username'];
+			$pass = $_GET['password'];
 			$pdo = Database::connect();
 	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	        $sql = "SELECT id,name FROM customer ORDER BY name";
+	        $sql = "SELECT username,password FROM customer WHERE username =  ";
 	        $q = $pdo->prepare($sql);
 	        $q->execute();
 	        $categories = $q->fetchAll();
 	        Database::disconnect(); 
 
-
+	        echo $user;
 
 
 ?>

@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 	function login(user,pass) {
 		$.get("validate.php?username=" + user + "&password=" + pass , function (data) {
-			console.log("hey you");
+			console.log(data);
 		});
 	}
 
