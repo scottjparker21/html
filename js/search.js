@@ -3,20 +3,20 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-		var empty = '';
-		if (inp === empty){
-			console.log('empty');
-		}
+		
 		$.get( "test.php?entry=" + inp, function( data ) {
 		  		$( ".results" ).html(data);
 		});
 	}
 
 	$('#search').keyup(function() {
-
+		var empty = '';
+		if (inp === empty){
+			console.log('empty');
+		}
 		var entry = $(this).val();
-        if(entry !== '' && entry !== null) {
-            search(entry);
+        else if(entry !== '' && entry !== null) {
+            	search(entry);
 		}
 	});		
 
