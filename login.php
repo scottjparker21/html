@@ -8,15 +8,15 @@
 
 						<form class="form-horizontal">
 		  <div class="control-group">
-		    <label class="control-label" for="inputEmail">Email</label>
+		    <label class="control-label" for="inputUsername">Username</label>
 		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="Email">
+		      <input type="text" id="inputUser" placeholder="Username">
 		    </div>
 		  </div>
 		  <div class="control-group">
 		    <label class="control-label" for="inputPassword">Password</label>
 		    <div class="controls">
-		      <input type="password" id="inputPassword" placeholder="Password">
+		      <input type="password" id="inputPass" placeholder="Password">
 		    </div>
 		  </div>
 		  <div class="control-group">

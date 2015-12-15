@@ -8,8 +8,8 @@ $( document ).ready(function() {
 	}
 
 	$('#send').click(function() {
-			var username = $("#user").val()
-			var password = $("#pass").val()
+			var username = $("#inputUser").val()
+			var password = $("#inputPass").val()
 			console.log(username);
 			console.log(password);
 
