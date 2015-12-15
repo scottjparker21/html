@@ -43,7 +43,7 @@
                           <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
                 </form>
-                <li><a class="btn" href="login.php"><i class="icon-user">Login</i></a></li>
+                <li><i class="icon-user"></i><a class="btn" href="login.php">Login</a></li>
       			</ul>
     		</div>
   		</div>
