@@ -3,7 +3,8 @@ $( document ).ready(function() {
 
 
 	function search (inp){
-		if (inp === ''){
+		var empty = '';
+		if (inp === empty){
 			console.log('empty');
 		}
 		$.get( "test.php?entry=" + inp, function( data ) {
