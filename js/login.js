@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			console.log('now im here');
 
 			logmein(username,password);
-		}	
+			
 	});
 });
 
