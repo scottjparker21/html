@@ -14,11 +14,11 @@ $( document ).ready(function() {
 
 		if (entry === empty){
 			console.log('empty');
-			$( "#container" ).show();
+			$( "#content" ).show();
 
 		}
         else if(entry !== '' && entry !== null) {
-        	$( "#container" ).hide();
+        	$( "#content" ).hide();
         	$( ".results" ).show();
             	search(entry);
 		}

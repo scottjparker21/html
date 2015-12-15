@@ -3,9 +3,10 @@
 		<?php require 'header.php';?>
 		<body>
 			<?php require 'navbar.php';?>
-			<div id="container">
+			<div class="results"></div>	
+			<div id="content">
 
-				<div class="results"></div>	
+				
 
 				<p> This will hopefully been hidden when search field is not empty. </p>
 
