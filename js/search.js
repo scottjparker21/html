@@ -12,7 +12,7 @@ $( document ).ready(function() {
 	$('#search').keyup(function() {
 		var empty = '';
 		var entry = $(this).val();
-		if (inp === empty){
+		if (entry === empty){
 			console.log('empty');
 		}
         else if(entry !== '' && entry !== null) {
