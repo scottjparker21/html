@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 	function search (inp){
 		console.log(inp);
-		if (inp == ){
+		if (inp == undefined ){
 			console.log('empty');
 		}
 		$.get( "test.php?entry=" + inp, function( data ) {
