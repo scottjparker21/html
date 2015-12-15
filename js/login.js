@@ -8,14 +8,12 @@ $( document ).ready(function() {
 	}
 
 	$('#send').click(function() {
-			var username = $("#inputUser").val()
-			var password = $("#inputPass").val()
-			console.log(username);
-			console.log(password);
-
+			var username = $("#inputUser").val();
+			var password = $("#inputPass").val();
+			console.log('here i am lord');
 			login(username,password);
-
-		});
+				
 	});
+});
 
 
