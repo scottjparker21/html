@@ -9,7 +9,9 @@
 	        $categories = $q->fetchAll();
 	        Database::disconnect(); 
 	 ?>
-
+   
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.map">
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -41,7 +43,7 @@
                           <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
                 </form>
-                <li><a class="btn" href="login.php">Login<i class="icon-user"></i></a>
+                <li><a class="btn" href="login.php"><i class="icon-user">Login</i></a></li>
       			</ul>
     		</div>
   		</div>
