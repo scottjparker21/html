@@ -12,8 +12,8 @@ $( document ).ready(function() {
 		$.get("validate.php?username=" + username + "&password=" + password , function (data) {
 			console.log(data);
 	}
-				
-	});
+});
+
 });
 
 
