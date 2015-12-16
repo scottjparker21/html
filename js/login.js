@@ -7,7 +7,7 @@ $( document ).ready(function() {
 		var password = $("#inputPass").val();
 		var furl = 'validate.php?username='+username+'&password='+password;
 		console.log(furl);
-		$.get(furl , function(data) {
+		$.get(furl, function(data) {
 			console.log(data);
 			console.log('ending here');
 		});
