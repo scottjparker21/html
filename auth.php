@@ -13,14 +13,15 @@
 	        $id = $data['id'];
 	        $password = $data['data'];
 	        Database::disconnect(); 
-
+	        echo $user;
+	        echo $username;
 	         		
-		    if($user == $username && $pass == $password) {
-		    	echo "ya logged in naw";
-		    }
-		    else{
-		    	echo "ya flippin goofed man";
-		    }
+		    // if($user == $username && $pass == $password) {
+		    // 	echo "ya logged in naw";
+		    // }
+		   	// if ($user != $username &&{
+		    // 	echo "ya flippin goofed man";
+		    // }
 
 		      // customer id, firstname and transaction id (set to NULL at login)
 		       		
