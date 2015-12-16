@@ -28,19 +28,16 @@
 
 			<?php require 'footer.php';?>
 			<script>
-				$( document ).ready(function() {
+				$(document).ready(function() {
 
-					function logmein() {
-						var username = $("#inputUser").val();
-						var password = $("#inputPass").val();
+					$('#send').on("click",function(){
+						var user = $("#inputUser").val();
+						var pass = $("#inputPass").val();
 						$.get('auth.php', function(data) {
 							console.log("getting data");
 							alert(data);
 						});
-						console.log('ending');
-					}
-
-					$('#send').on("click",logmein);
+					});
 					
 				});
 			</script>
