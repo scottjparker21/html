@@ -16,12 +16,9 @@
 	        echo $user;
 	        echo $username;
 	         		
-		    // if($user == $username && $pass == $password) {
-		    // 	echo "ya logged in naw";
-		    // }
-		   	// if ($user != $username &&{
-		    // 	echo "ya flippin goofed man";
-		    // }
+		   	if ($user == $username) {
+		   		echo "good job mon";
+		   	}
 
 		      // customer id, firstname and transaction id (set to NULL at login)
 		       		
