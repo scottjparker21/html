@@ -19,6 +19,6 @@
 			//        	   $results .= $row['password'];
 			//        	   $results .= "</p>";
 		 //       		}
-		       		echo "<script>alert('i love bacon')</script>";
+		       		echo "i love bacon";
 		       		
 ?>

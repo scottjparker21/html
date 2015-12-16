@@ -18,11 +18,13 @@ $( document ).ready(function() {
 			$(".results").hide();
 
 		}
+		
         else if(entry !== '' && entry !== null) {
         	
         	$( "#content" ).hide();
         	$( ".results" ).show();
-            	search(entry);
+            	
+            search(entry);
 		}
 	});		
 
