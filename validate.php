@@ -9,7 +9,7 @@
 	  //       $q = $pdo->prepare($sql);
 	  //       $q->execute(array($user));
 	  //       $customer = $q->fetchAll();
-	        // Database::disconnect(); 
+	  //       Database::disconnect(); 
 
 	  //       $results = '';
 
@@ -19,6 +19,6 @@
 			//        	   $results .= $row['password'];
 			//        	   $results .= "</p>";
 		 //       		}
-		       		echo "i love bacon";
+		       		echo "<script>alert('i love bacon')</script>";
 		       		
 ?>
