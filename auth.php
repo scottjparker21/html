@@ -15,7 +15,7 @@
 	        Database::disconnect(); 
 
 	         		
-		    if($user === $username && $pass === $password) {
+		    if($user == $username && $pass == $password) {
 		    	echo "ya logged in naw";
 		    }
 		    else{
