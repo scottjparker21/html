@@ -3,11 +3,7 @@ $( document ).ready(function() {
 
 	function logmein(user,pass) {
 
-		$.get("validate.php" , function(data) {
-			console.log(data);
-			console.log('ending here');
-		});
-	}
+		
 
 	$('#send').click(function() {
 		console.log('here i am lord');
@@ -15,9 +11,17 @@ $( document ).ready(function() {
 			var password = $("#inputPass").val();
 			console.log('now im here');
 
-			logmein(username,password);
+			// logmein(username,password);
+			$.get("validate.php" , function(data) {
+			console.log(data);
+			console.log('ending here');
+			console.log(data);
+
+		});
+	}
 
 	});
 });
+
 
 
