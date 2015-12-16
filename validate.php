@@ -20,5 +20,5 @@
 			       	   $results .= "</p>";
 		       		}
 		       		echo "ello mate";
-		       		echo $results;
+		       		
 ?>
