@@ -1,4 +1,5 @@
 
+
 $( document ).ready(function() {
 
 	function logmein() {
@@ -15,5 +16,3 @@ $( document ).ready(function() {
 	$('#send').on("click",logmein);
 	
 });
-
-
