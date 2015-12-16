@@ -3,7 +3,6 @@
 		<?php require 'header.php'; ?>
 		<body>
 			<?php require 'navbar.php'; ?>
-			<form class="form-horizontal">
 		  		<div class="control-group">
 		    		<label class="control-label" for="inputUsername">Username</label>
 		    		<div class="controls">
@@ -24,7 +23,6 @@
 		      			<button id="send" class="btn">Sign in</button>
 		    		</div>
 		  		</div>
-			</form>
 
 			<?php require 'footer.php';?>
 			<script>
