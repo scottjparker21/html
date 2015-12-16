@@ -1,8 +1,10 @@
 
 $( document ).ready(function() {
 
-	function logmein(user,pass) {
-		var furl = "validate.php?username=" + user + "&password=" + pass;
+	function logmein() {
+		var username = $("#inputUser").val();
+		var password = $("#inputPass").val();
+		var furl = "validate.php?username=" + username + "&password=" + password;
 		console.log(furl);
 		$.get(furl , function(data) {
 			console.log(data);
@@ -10,15 +12,8 @@ $( document ).ready(function() {
 		});
 	}
 
-	$('#send').click(function() {
-		console.log('here i am lord');
-			var username = $("#inputUser").val();
-			var password = $("#inputPass").val();
-			console.log('now im here');
-
-			logmein(username,password);
-
-	});
+	$('#send').on("click",logmein);
+	
 });
 
 
