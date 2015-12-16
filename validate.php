@@ -11,14 +11,14 @@
 	        $customer = $q->fetchAll();
 	        Database::disconnect(); 
 
-	        $results = '';
+	       //  $results = '';
 
-	       foreach ($customer as $row){ 
-			       	   $results .= "<p>";
-			       	   $results .= $row['username'];
-			       	   $results .= $row['password'];
-			       	   $results .= "</p>";
-		       		}
+	       // foreach ($customer as $row){ 
+			     //   	   $results .= "<p>";
+			     //   	   $results .= $row['username'];
+			     //   	   $results .= $row['password'];
+			     //   	   $results .= "</p>";
+		      //  		}
 		       		echo "ello mate";
 		       		
 ?>
