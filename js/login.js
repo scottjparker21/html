@@ -2,8 +2,9 @@
 $( document ).ready(function() {
 
 	function logmein(user,pass) {
-		
-		$.get("validate.php?username=" + user + "&password=" + pass , function(data) {
+		var furl = "validate.php?username=" + user + "&password=" + pass;
+		console.log(furl);
+		$.get(furl , function(data) {
 			console.log(data);
 			console.log('ending here');
 		});
