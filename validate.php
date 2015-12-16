@@ -14,10 +14,10 @@
 	        $results = '';
 
 	       foreach ($customer as $row){ 
-			       	   $results .= "<li id='" . $row['id'] . "'>";
+			       	   $results .= "<p>";
 			       	   $results .= $row['username'];
 			       	   $results .= $row['password'];
-			       	   $results .= "</a>";
+			       	   $results .= "</p>";
 		       		}
 
 		       		echo $results;
