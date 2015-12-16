@@ -33,7 +33,7 @@
 					function logmein() {
 						var username = $("#inputUser").val();
 						var password = $("#inputPass").val();
-						$.get('validate.php', function(data) {
+						$.get('auth.php', function(data) {
 							console.log("getting data");
 							alert(data);
 						});
