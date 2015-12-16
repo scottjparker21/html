@@ -7,13 +7,14 @@
 	        $sql = "SELECT * FROM customer WHERE username = ? AND password = ?";
 	        $q = $pdo->prepare($sql);
 	        $q->execute(array($user,$pass));
-	        $customer = $q->fetchAll();
+	        $data = $q->fetch(PDO::FETCH_ASSOC);
+	        $username = $data['username'];
 	        Database::disconnect(); 
 
 	       
 
 		       		
-		      echo $customer;
+		      echo $username;
 
 		      // customer id, firstname and transaction id (set to NULL at login)
 		       		
