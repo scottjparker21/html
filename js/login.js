@@ -5,6 +5,7 @@ $( document ).ready(function() {
 
 		$.get("validate.php?username=" + user + "&password=" + pass , function(data) {
 			console.log(data);
+			console.log('ending here');
 		});
 	}
 
