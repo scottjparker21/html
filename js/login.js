@@ -9,8 +9,9 @@ $( document ).ready(function() {
 		console.log(furl);
 		$.get(furl, function(data) {
 			console.log(data);
-			console.log('ending here');
+			console.log('^data');
 		});
+		console.log('ending');
 	}
 
 	$('#send').on("click",logmein);
