@@ -10,7 +10,7 @@
 	        $data = $q->fetch(PDO::FETCH_ASSOC);
 			$id = $data['id']	        
 	        $username = $data['username'];
-	        $password = $data["password"]
+	        $password = $data["password"];
 	        Database::disconnect(); 
 
 	     	
