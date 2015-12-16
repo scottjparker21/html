@@ -2,7 +2,7 @@
 $( document ).ready(function() {
 
 	function logmein(user,pass) {
-		console.log(pass);
+		
 		$.get("validate.php?username=" + user + "&password=" + pass , function (data) {
 			console.log(data);
 		});
