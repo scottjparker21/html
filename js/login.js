@@ -1,15 +1,11 @@
-
-
 $( document ).ready(function() {
 
 	function logmein() {
 		var username = $("#inputUser").val();
 		var password = $("#inputPass").val();
-		var furl = 'validate.php?username='+username+'&password='+password;
-		console.log(furl);
-		$.get(furl, function(data) {
+		$.get('validate.php?username='+username+'&password='+password, function(data) {
+			console.log("getting data");
 			console.log(data);
-			console.log('^data');
 		});
 		console.log('ending');
 	}
