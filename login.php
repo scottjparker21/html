@@ -25,20 +25,6 @@
 		  		</div>
 
 			<?php require 'footer.php';?>
-			<script>
-				$(document).ready(function() {
-
-					$('#send').on("click",function(){
-						var user = $("#inputUser").val();
-						var pass = $("#inputPass").val();
-						$.get('auth.php', function(data) {
-							console.log("getting data");
-							alert(data);
-						});
-					});
-					
-				});
-			</script>
 
 		</body>
 	</html>
