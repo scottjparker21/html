@@ -18,8 +18,9 @@
 	         		
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
+		   		echo $id;
 		   	}
-		   	else{
+		   	else {
 		   		echo "you done goofed there hombre";
 		   	}
 
