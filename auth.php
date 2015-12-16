@@ -11,13 +11,16 @@
 	        $data = $q->fetch(PDO::FETCH_ASSOC);
 	        $username = $data['username'];
 	        $id = $data['id'];
-	        $password = $data['data'];
+	        $password = $data['password'];
 	        Database::disconnect(); 
 	        echo $user;
 	        echo $username;
 	         		
-		   	if ($user == $username) {
+		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
+		   	}
+		   	else{
+		   		echo "you done goofed there hombre";
 		   	}
 
 		      // customer id, firstname and transaction id (set to NULL at login)
