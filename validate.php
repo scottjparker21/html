@@ -19,6 +19,6 @@
 			//        	   $results .= $row['password'];
 			//        	   $results .= "</p>";
 		 //       		}
-		       		echo $user;
+		       		echo "i love bacon";
 		       		
 ?>
