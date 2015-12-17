@@ -7,20 +7,9 @@
 			<div class="results"></div>	
 			<div id="content">
 
-				<?php
-
-				 if( isset( $_SESSION['userid'] ) )
-	   {
-	      echo "you are logged in" ;
-	   }
-	 if( empty( $_SESSION['userid'] ))
-	   {
-	   	  echo "create account to login";
-	   }
-	   ?>
+				<?php echo $_SESSION['name']; ?>
 
 				<p> This will hopefully been hidden when search field is not empty. </p>
-
 
 
 
