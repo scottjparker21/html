@@ -14,12 +14,14 @@
 	        $last = $data['last'];
 	        $id = $data['id'];
 	        $password = $data['password'];
+	        $permission = $data['permission'];
 	        Database::disconnect(); 
 	        
 	        $_SESSION["id"] = $id;
 	        $_SESSION["first"] = $first;
 	        $_SESSION["last"] = $last;
 	        $_SESSION["username"] = $username;
+	        $_SESSION["permission"] = $permission;
 	        
 		   	if ($user == $username && $pass == $password) {
 		   		echo "Welcome " . $_SESSION["first"] . " you have been successfully logged in.";
