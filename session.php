@@ -4,7 +4,7 @@
 
 	$_SESSION["id"] = NULL;
 
-	 if( isset( $_SESSION['id'] ) )
+	 if( isset( $_SESSION['userid'] ) )
    {
       $_SESSION["id"] = $_SESSION["userid"];
       echo $_SESSION["id"];
