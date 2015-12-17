@@ -2,7 +2,7 @@
 	
 	session_start();
 
-	$_SESSION["id"] = NULL;
+	echo $_SESSION['userid'];
 
 	 if( isset( $_SESSION['userid'] ) )
 	   {
