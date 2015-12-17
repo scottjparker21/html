@@ -15,8 +15,10 @@
 	        $id = $data['id'];
 	        $password = $data['password'];
 	        $permission = $data['permission'];
-	        
+
 	        Database::disconnect(); 
+
+	        session_start();
 	        
 	        $_SESSION["userid"] = $id;
 	        $_SESSION["first"] = $first;
