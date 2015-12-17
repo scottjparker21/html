@@ -14,7 +14,7 @@
 	        $password = $data['password'];
 	        Database::disconnect(); 
 	        
-	        $_SESSION[""] = $id;
+	        $_SESSION["session_id"] = $id;
 	        print_r($_SESSION);
 
 		   	if ($user == $username && $pass == $password) {
