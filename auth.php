@@ -14,11 +14,11 @@
 	        $password = $data['password'];
 	        Database::disconnect(); 
 	        
-	         		
+	        $_SESSION[""] = $id; 		
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
 		   		
-		   		echo "Current user id is " . $_SESSION["$id"] . ".";
+		   		echo "Current user id is " . $_SESSION . ".";
 		   	}
 		   	else {
 		   		echo "you done goofed there hombre";
