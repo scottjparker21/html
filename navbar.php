@@ -42,7 +42,7 @@
                     </div>
                 </form>
                   <?php if( isset( $_SESSION['userid'] ) ){ ?>
-                      <li><i class="icon icon-user"></i><a class="btn" href="">Cart</a></li>
+                      <li><span class="glyphicon glyphicon-shopping-cart"></span><a class="btn" href="">Cart</a></li>
                   <?php } ?>
                   <?php if( isset( $_SESSION['userid'] ) ){ ?>
                         <li><i class="icon-user"></i><a class="btn" href="logout.php">Logout</a></li>
