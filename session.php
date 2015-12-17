@@ -6,11 +6,11 @@
 
 	 if( isset( $_SESSION['userid'] ) )
 	   {
-	      echo "Hey User";
+	      print_r($_SESSION);
 	   }
 	   if( empty( $_SESSION['userid'] ))
 	   {
-	   	  echo "Go make an account.";
+	   	  print_r($_SESSION);
 	   }
 
 
