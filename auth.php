@@ -14,8 +14,9 @@
 	        $password = $data['password'];
 	        Database::disconnect(); 
 	        
-	        echo $id;
-	        		
+	        $_SESSION[""] = $id;
+	        print_r($_SESSION);
+
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
 		   		
