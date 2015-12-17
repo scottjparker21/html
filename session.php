@@ -4,11 +4,11 @@
 
 	 if( isset( $_SESSION['userid'] ) )
 	   {
-	      print_r($_SESSION['userid']);
+	      echo "you are logged in" ;
 	   }
 	 if( empty( $_SESSION['userid'] ))
 	   {
-	   	  print_r($_SESSION['userid']);
+	   	  echo "you are not logged in";
 	   }
 
 ?>
