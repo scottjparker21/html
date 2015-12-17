@@ -6,7 +6,7 @@
 	   {
 	      echo "you are logged in" ;
 	   }
-	 if( empty( $_SESSION['userid'] ))
+	 else
 	   {
 	   	  echo "create account to login";
 	   }
