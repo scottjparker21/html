@@ -4,11 +4,10 @@
 
 	$_SESSION["id"] = NULL;
 
-	 if( isset( $_SESSION['userid'] ) )
-   {
-      $_SESSION["id"] = $_SESSION["userid"];
-      echo $_SESSION["id"];
-   }
+	 if( empty( $_SESSION['userid'] ) )
+	   {
+	      echo "you should probably make an account";
+	   }
 
 
 ?>

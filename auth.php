@@ -15,6 +15,7 @@
 	        $id = $data['id'];
 	        $password = $data['password'];
 	        $permission = $data['permission'];
+	        
 	        Database::disconnect(); 
 	        
 	        $_SESSION["userid"] = $id;
