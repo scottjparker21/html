@@ -36,5 +36,5 @@
 		   	}
 
 		      // customer id, firstname and transaction id (set to NULL at login)
-		       		
+		    header("index.php")		
 ?>
