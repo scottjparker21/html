@@ -13,8 +13,7 @@
 	        $id = $data['id'];
 	        $password = $data['password'];
 	        Database::disconnect(); 
-	        echo $user;
-	        echo $username;
+	        
 	         		
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
