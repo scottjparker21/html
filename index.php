@@ -7,7 +7,7 @@
 			<div class="results"></div>	
 			<div id="content">
 
-				<?php echo $_SESSION['name']; ?>
+				<?php echo $_SESSION['first']; ?>
 
 				<p> This will hopefully been hidden when search field is not empty. </p>
 
