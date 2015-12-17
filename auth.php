@@ -18,7 +18,8 @@
 	         		
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
-		   		echo $id;
+		   		
+		   		echo "Current user id is " . $_SESSION["$id"] . ".";
 		   	}
 		   	else {
 		   		echo "you done goofed there hombre";
