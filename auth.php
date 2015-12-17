@@ -17,7 +17,7 @@
 	        $permission = $data['permission'];
 	        Database::disconnect(); 
 	        
-	        $_SESSION["id"] = $id;
+	        $_SESSION["userid"] = $id;
 	        $_SESSION["first"] = $first;
 	        $_SESSION["last"] = $last;
 	        $_SESSION["username"] = $username;
