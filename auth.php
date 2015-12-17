@@ -14,7 +14,7 @@
 	        $password = $data['password'];
 	        Database::disconnect(); 
 	        
-	        $_SESSION["NULL"] = $id; 		
+	        $_SESSION["NULL"] = $data['id']; 		
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
 		   		
