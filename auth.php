@@ -25,7 +25,7 @@
 	        
 		   	if ($user == $username && $pass == $password) {
 		   		echo "Welcome " . $_SESSION["first"] . " you have been successfully logged in.";
-		   		echo $_SESSION["userid"];
+		   		echo . "in auth" . $_SESSION["userid"];
 
 		   	}
 		   	else {
