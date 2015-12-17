@@ -8,7 +8,7 @@
 	   }
 	 if( empty( $_SESSION['userid'] ))
 	   {
-	   	  echo "you are not logged in";
+	   	  echo "create account to login";
 	   }
 
 ?>
