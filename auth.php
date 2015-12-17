@@ -10,19 +10,23 @@
 	        $q->execute(array($user,$pass));
 	        $data = $q->fetch(PDO::FETCH_ASSOC);
 	        $username = $data['username'];
+	        $first = $data['first'];
+	        $last = $data['last'];
 	        $id = $data['id'];
 	        $password = $data['password'];
 	        Database::disconnect(); 
 	        
-	        $_SESSION["session_id"] = $id;
+	        $_SESSION["id"] = $id;
+	        $_SESSION["first"] = $first;
+	        $_SESSION["last"] = $last;
+	        $_SESSION["username"] = $username;
 	        
 		   	if ($user == $username && $pass == $password) {
-		   		echo "good job mon";
-		   		
-		   		echo "Current user id is " . $_SESSION["session_id"] . ".";
+		   		echo "Welcome " . $_SESSION["first"] . " you have been successfully logged in.";
+
 		   	}
 		   	else {
-		   		echo "you done goofed there hombre";
+		   		echo "Username or Password were not valid. Please try again.";
 		   	}
 
 		      // customer id, firstname and transaction id (set to NULL at login)
