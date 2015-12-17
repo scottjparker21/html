@@ -4,9 +4,12 @@
 
 	$_SESSION["id"] = NULL;
 
-	 if( empty( $_SESSION['userid'] ) )
+	 if( isset( $_SESSION['userid'] ) )
 	   {
-	      echo "you should probably make an account";
+	      echo "Hey User";
+	   }
+	   else {
+	   		echo "You should make an account!";
 	   }
 
 
