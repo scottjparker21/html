@@ -15,14 +15,11 @@
 	        Database::disconnect(); 
 	        
 	        $_SESSION["session_id"] = $id;
-	        print_r($_SESSION);
-
-	        echo "This was echoed: " . $_SESSION["session_id"];
-
+	        
 		   	if ($user == $username && $pass == $password) {
 		   		echo "good job mon";
 		   		
-		   		echo "Current user id is " . $_SESSION . ".";
+		   		echo "Current user id is " . $_SESSION["session_id"] . ".";
 		   	}
 		   	else {
 		   		echo "you done goofed there hombre";
