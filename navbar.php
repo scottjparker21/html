@@ -41,7 +41,12 @@
                           <input type="text" class="form-control" placeholder="Search" id="search">
                     </div>
                 </form>
-                <li><i class="icon-user"></i><a class="btn" href="login.php">Login</a></li>
+                  <?php if( isset( $_SESSION['userid'] ) ){ ?>
+                        <li><i class="icon-user"></i><a class="btn" href="logout.php">Logout</a></li>
+                 <?php } 
+                    else{ ?>
+                    <li><i class="icon-user"></i><a class="btn" href="login.php">Login</a></li>
+                 <?php } ?>
       			</ul>
     		</div>
   		</div>
