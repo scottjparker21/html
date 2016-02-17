@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Something Site</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+ 
+<body>
     <div class="container">
-    	<h1> hello world </h1>
-
-
-    </div><!-- /.container -->
+            <div class="row">
+                <h3>PHP CRUD Grid</h3>
+            </div>
+            <div class="row">
+                <p>
+                    <a href="create.php" class="btn btn-success">Create</a>
+                </p>
+                <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email Address</th>
+                          <th>Mobile Number</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <?php
+                       include 'database.php';
+                       $pdo = Database::connect();
+                       $sql = 'SELECT * FROM customers ORDER BY id DESC';
+                       foreach ($pdo->query($sql) as $row) {
+                                echo '<tr>';
+                                echo '<td>'. $row['name'] . '</td>';
+                                echo '<td>'. $row['email'] . '</td>';
+                                echo '<td>'. $row['mobile'] . '</td>';
+				echo '<td width=250>';
+                                echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
+                                echo ' ';
+                                echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
+                                echo ' ';
+                                echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
+                                echo '</td>';
+                                echo '<td><a class="btn" href="read.php?id='.$row['id'].'">Read</a></td>';
+                                echo '</tr>';
+                       }
+                       Database::disconnect();
+                      ?>
+                      </tbody>
+                </table>
+        </div>
+    </div> <!-- /container -->
   </body>
 </html>
-
