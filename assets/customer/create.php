@@ -1,8 +1,13 @@
 
 <?php
+	
+	error_reporting(E_ALL);
+	echo "here i am";
      
     require 'database.php';
- 
+ 	
+	echo "now im here";
+
     if ( !empty($_POST)) {
         // keep track validation errors
         $firstError = null;
