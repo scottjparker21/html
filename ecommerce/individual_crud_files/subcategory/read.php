@@ -1,6 +1,6 @@
 <?php
 // READ PAGE
-    require 'database.php';
+    require_once '../../database.php';
     $id = null;
     if ( !empty($_GET['id'])) {
         $id = $_REQUEST['id'];

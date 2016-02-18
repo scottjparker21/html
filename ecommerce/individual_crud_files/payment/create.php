@@ -1,5 +1,5 @@
 <?php
-    require 'database.php';
+    require_once '../../database.php';
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);
     
