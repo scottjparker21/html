@@ -3,7 +3,7 @@
 require_once 'includes/db_connect.php';
 
 require_once 'includes/functions.php';
-/* 
+ 
 sec_session_start();
  
 if (login_check($mysqli) == true) {
@@ -11,7 +11,7 @@ if (login_check($mysqli) == true) {
 } else {
     $logged = 'out';
 }
-*/
+
 ?>
 
 <!DOCTYPE html>

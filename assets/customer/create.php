@@ -4,7 +4,7 @@
 	error_reporting(E_ALL);
 	echo "here i am";
      
-    require 'database.php';
+    require_once '../database.php';
  	
 	echo "now im here";
 
