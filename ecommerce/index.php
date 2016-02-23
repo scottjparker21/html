@@ -12,9 +12,8 @@
 				<p> This will hopefully been hidden when search field is not empty. </p>
 
 
-
-			<?php require 'footer.php';?>
 			</div>
+			<?php require 'footer.php';?>
 		</body>
 	</html>
 
